@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -6991,9 +6991,18 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="U2" gate="A" pin="VCC"/>
 <wire x1="-20.32" y1="76.2" x2="-20.32" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="VCC"/>
-<wire x1="86.36" y1="116.84" x2="-20.32" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="116.84" x2="78.74" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="116.84" x2="-20.32" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="116.84" x2="-20.32" y2="76.2" width="0.1524" layer="91"/>
 <junction x="-20.32" y="76.2"/>
+<pinref part="U$1" gate="G$1" pin="~HOLD"/>
+<wire x1="86.36" y1="96.52" x2="78.74" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="96.52" x2="78.74" y2="99.06" width="0.1524" layer="91"/>
+<junction x="78.74" y="116.84"/>
+<pinref part="U$1" gate="G$1" pin="~W"/>
+<wire x1="78.74" y1="99.06" x2="78.74" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="99.06" x2="78.74" y2="99.06" width="0.1524" layer="91"/>
+<junction x="78.74" y="99.06"/>
 </segment>
 </net>
 <net name="N$5" class="0">
