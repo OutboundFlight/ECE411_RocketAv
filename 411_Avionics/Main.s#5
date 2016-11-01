@@ -10429,7 +10429,10 @@ Based on the following source:
 <text x="83.82" y="109.22" size="1.778" layer="97">Check Footprint</text>
 <text x="233.68" y="109.22" size="1.778" layer="97">3.3V</text>
 <text x="124.46" y="177.8" size="1.778" layer="97">Check Footprint</text>
-<text x="419.1" y="7.62" size="1.778" layer="97">A</text>
+<text x="419.1" y="7.366" size="2.54" layer="97">A</text>
+<text x="360.68" y="10.16" size="2.54" layer="97">00000001</text>
+<text x="330.2" y="25.4" size="2.54" layer="97">Model Rocket Avionics
+Schematic Diagram</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="127" y="106.68"/>
@@ -10895,4 +10898,10 @@ Based on the following source:
 </errors>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
