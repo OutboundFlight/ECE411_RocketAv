@@ -55,7 +55,7 @@
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
@@ -7252,6 +7252,134 @@ http://www.bobstarr.net</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="tinyav-lib">
+<packages>
+<package name="ESWITCH">
+<description>Footprint for E-Switch mini-SPDT switches, specifically the E-1218 (SparkFun: COM-00102)</description>
+<pad name="2" x="0" y="0" drill="0.9" diameter="1.2" shape="long" rot="R90"/>
+<pad name="3" x="2.5" y="0" drill="0.9" diameter="1.2" shape="long" rot="R90"/>
+<pad name="1" x="-2.5" y="0" drill="0.9" diameter="1.2" shape="long" rot="R90"/>
+<wire x1="5.8" y1="2" x2="5.8" y2="-2" width="0.127" layer="51"/>
+<wire x1="5.8" y1="-2" x2="-5.8" y2="-2" width="0.127" layer="51"/>
+<wire x1="-5.8" y1="-2" x2="-5.8" y2="2" width="0.127" layer="51"/>
+<wire x1="-5.8" y1="2" x2="5.8" y2="2" width="0.127" layer="51"/>
+<wire x1="2.5" y1="1.1" x2="-2.5" y2="1.1" width="0.127" layer="51"/>
+<wire x1="-2.5" y1="1.1" x2="-2.5" y2="-1.1" width="0.127" layer="51"/>
+<wire x1="-2.5" y1="-1.1" x2="2.5" y2="-1.1" width="0.127" layer="51"/>
+<wire x1="2.5" y1="-1.1" x2="2.5" y2="1.1" width="0.127" layer="51"/>
+<wire x1="-2.2" y1="1" x2="-2.2" y2="-1" width="0.127" layer="51"/>
+<wire x1="-2.2" y1="-1" x2="-0.3" y2="-1" width="0.127" layer="51"/>
+<wire x1="-0.3" y1="-1" x2="-0.3" y2="1" width="0.127" layer="51"/>
+<wire x1="-0.3" y1="1" x2="-2.2" y2="1" width="0.127" layer="51"/>
+<wire x1="-5.8" y1="2" x2="5.8" y2="2" width="0.127" layer="21"/>
+<wire x1="5.8" y1="2" x2="5.8" y2="-2" width="0.127" layer="21"/>
+<wire x1="5.8" y1="-2" x2="-5.8" y2="-2" width="0.127" layer="21"/>
+<wire x1="-5.8" y1="-2" x2="-5.8" y2="2" width="0.127" layer="21"/>
+<text x="-3" y="2.3" size="1.27" layer="25" font="vector">&gt;NAME</text>
+<text x="-3.4" y="-3.7" size="1.27" layer="27" font="vector">&gt;VALUE</text>
+</package>
+<package name="TSOT23-6">
+<description>&lt;b&gt;S6 Package 6-Lead Plastic TSOT-23&lt;/b&gt;&lt;p&gt;
+Source: http://cds.linear.com/docs/Datasheet/623012fb.pdf</description>
+<wire x1="1.422" y1="-0.781" x2="-1.423" y2="-0.781" width="0.1524" layer="51"/>
+<wire x1="-1.423" y1="-0.781" x2="-1.423" y2="0.781" width="0.1524" layer="21"/>
+<wire x1="-1.423" y1="0.781" x2="1.422" y2="0.781" width="0.1524" layer="51"/>
+<wire x1="1.422" y1="0.781" x2="1.422" y2="-0.781" width="0.1524" layer="21"/>
+<circle x="-1.15" y="-0.5" radius="0.1" width="0" layer="21"/>
+<smd name="1" x="-0.95" y="-1.3" dx="0.62" dy="1.22" layer="1"/>
+<smd name="2" x="0" y="-1.3" dx="0.62" dy="1.22" layer="1"/>
+<smd name="3" x="0.95" y="-1.3" dx="0.62" dy="1.22" layer="1"/>
+<smd name="4" x="0.95" y="1.3" dx="0.62" dy="1.22" layer="1"/>
+<smd name="5" x="0" y="1.3" dx="0.62" dy="1.22" layer="1"/>
+<smd name="6" x="-0.95" y="1.3" dx="0.62" dy="1.22" layer="1"/>
+<text x="2.8575" y="-1.5875" size="1.016" layer="27" ratio="10" rot="R90">&gt;VALUE</text>
+<text x="-1.5875" y="-1.5875" size="1.016" layer="25" ratio="10" rot="R90">&gt;NAME</text>
+<rectangle x1="-1.175" y1="-1.4" x2="-0.725" y2="-0.8" layer="51"/>
+<rectangle x1="-0.225" y1="-1.4" x2="0.225" y2="-0.8" layer="51"/>
+<rectangle x1="0.725" y1="-1.4" x2="1.175" y2="-0.8" layer="51"/>
+<rectangle x1="0.725" y1="0.8" x2="1.175" y2="1.4" layer="51"/>
+<rectangle x1="-0.225" y1="0.8" x2="0.225" y2="1.4" layer="51"/>
+<rectangle x1="-1.175" y1="0.8" x2="-0.725" y2="1.4" layer="51"/>
+</package>
+</packages>
+<symbols>
+<symbol name="SPDT">
+<description>Symbol for simple SPDT. COM is pin 1.</description>
+<circle x="3.81" y="2.54" radius="0.762" width="0.254" layer="94"/>
+<circle x="3.81" y="-2.54" radius="0.762" width="0.254" layer="94"/>
+<circle x="-3.81" y="0" radius="0.803215625" width="0.254" layer="94"/>
+<wire x1="-3.048" y1="0" x2="3.81" y2="1.524" width="0.254" layer="94"/>
+<pin name="COM" x="-7.62" y="0" visible="off" length="short"/>
+<pin name="P1" x="7.62" y="2.54" visible="off" length="short" rot="R180"/>
+<pin name="P2" x="7.62" y="-2.54" visible="off" length="short" rot="R180"/>
+<text x="-4.064" y="4.064" size="1.778" layer="95">&gt;NAME</text>
+<text x="-4.318" y="-6.35" size="1.778" layer="96">&gt;VALUE</text>
+<wire x1="5.08" y1="2.54" x2="4.572" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="4.572" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-4.572" y2="0" width="0.1524" layer="94"/>
+<text x="-7.62" y="-2.286" size="1.27" layer="95">COM</text>
+<text x="4.826" y="2.794" size="1.27" layer="95">P1</text>
+<text x="4.826" y="-2.286" size="1.27" layer="95">P2</text>
+</symbol>
+<symbol name="LTC1998">
+<description>LTC1998
+
+2.5µA, 1% Accurate SOT-23 Comparator and Voltage Reference for Battery Monitoring</description>
+<wire x1="7.62" y1="10.16" x2="-7.62" y2="10.16" width="0.254" layer="94"/>
+<pin name="BATT" x="-10.16" y="7.62" length="short"/>
+<pin name="VHYST" x="-10.16" y="2.54" length="short"/>
+<pin name="VTH" x="-10.16" y="0" length="short"/>
+<pin name="GND" x="-10.16" y="-7.62" length="short"/>
+<pin name="VLOGIC" x="10.16" y="5.08" length="short" rot="R180"/>
+<pin name="/BATTLO" x="10.16" y="-2.54" length="short" rot="R180"/>
+<wire x1="-7.62" y1="10.16" x2="-7.62" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-10.16" x2="7.62" y2="10.16" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-10.16" x2="7.62" y2="-10.16" width="0.254" layer="94"/>
+<text x="-7.112" y="10.922" size="1.27" layer="95">&gt;NAME</text>
+<text x="-7.112" y="-12.192" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="COM-00102">
+<description>Small SPDT switch listed on SparkFun as COM-00102. Equivalent to E-Switch EG1218.</description>
+<gates>
+<gate name="&gt;NAME" symbol="SPDT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ESWITCH">
+<connects>
+<connect gate="&gt;NAME" pin="COM" pad="2"/>
+<connect gate="&gt;NAME" pin="P1" pad="1"/>
+<connect gate="&gt;NAME" pin="P2" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LTC1998">
+<gates>
+<gate name="&gt;NAME" symbol="LTC1998" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="TSOT23-6">
+<connects>
+<connect gate="&gt;NAME" pin="/BATTLO" pad="6"/>
+<connect gate="&gt;NAME" pin="BATT" pad="1"/>
+<connect gate="&gt;NAME" pin="GND" pad="2"/>
+<connect gate="&gt;NAME" pin="VHYST" pad="4"/>
+<connect gate="&gt;NAME" pin="VLOGIC" pad="5"/>
+<connect gate="&gt;NAME" pin="VTH" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -7273,7 +7401,7 @@ http://www.bobstarr.net</description>
 <part name="R1" library="rcl" deviceset="R-US_" device="0309/12" value="4k'"/>
 <part name="SUPPLY7" library="supply2" deviceset="GND" device=""/>
 <part name="U3" library="LSM9DS0" deviceset="LSM9DS0" device=""/>
-<part name="U$1" library="SOIC127P600X175-8N" deviceset="M25P10-AVMN6TP_TR" device=""/>
+<part name="U2" library="SOIC127P600X175-8N" deviceset="M25P10-AVMN6TP_TR" device=""/>
 <part name="SUPPLY9" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY10" library="supply2" deviceset="GND" device=""/>
 <part name="C3" library="rcl" deviceset="C-EU" device="C0805" value="4.7µ"/>
@@ -7291,7 +7419,7 @@ http://www.bobstarr.net</description>
 <part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
 <part name="U$2" library="adafruit" deviceset="LP5907" device=""/>
 <part name="SUPPLY13" library="supply2" deviceset="GND" device=""/>
-<part name="U$3" library="adafruit" deviceset="ATMEGA32U4" device="-AU"/>
+<part name="U6" library="adafruit" deviceset="ATMEGA32U4" device="-AU"/>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
 <part name="P+2" library="supply1" deviceset="VCC" device=""/>
 <part name="P+3" library="supply1" deviceset="VCC" device=""/>
@@ -7317,6 +7445,15 @@ http://www.bobstarr.net</description>
 <attribute name="VENDOR" value="DIGIKEY"/>
 <attribute name="VENDOR_PN" value="CKN9112CT-ND"/>
 </part>
+<part name="S1" library="tinyav-lib" deviceset="COM-00102" device=""/>
+<part name="U5" library="tinyav-lib" deviceset="LTC1998" device=""/>
+<part name="C13" library="rcl" deviceset="C-EU" device="050-025X075" value="1µ"/>
+<part name="R4" library="rcl" deviceset="R-US_" device="R0805" value="56.2k"/>
+<part name="R3" library="rcl" deviceset="R-US_" device="R0805" value="649k"/>
+<part name="R5" library="rcl" deviceset="R-US_" device="R0805" value="348k"/>
+<part name="SUPPLY18" library="supply2" deviceset="GND" device=""/>
+<part name="C14" library="rcl" deviceset="C-EU" device="050-025X075" value="0.1u"/>
+<part name="SUPPLY19" library="supply2" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7326,32 +7463,29 @@ http://www.bobstarr.net</description>
 <text x="360.68" y="10.16" size="2.54" layer="97">00000001</text>
 <text x="330.2" y="25.4" size="2.54" layer="97">Model Rocket Avionics, Team 11
 Schematic Diagram</text>
-<wire x1="177.8" y1="264.16" x2="17.78" y2="264.16" width="0.1524" layer="97"/>
+<wire x1="259.08" y1="264.16" x2="17.78" y2="264.16" width="0.1524" layer="97"/>
 <text x="20.32" y="259.08" size="1.778" layer="97">Power Supply</text>
 <wire x1="259.08" y1="91.44" x2="259.08" y2="198.12" width="0.1524" layer="97"/>
-<wire x1="259.08" y1="198.12" x2="259.08" y2="200.66" width="0.1524" layer="97"/>
-<wire x1="259.08" y1="200.66" x2="259.08" y2="241.3" width="0.1524" layer="97"/>
+<wire x1="259.08" y1="198.12" x2="259.08" y2="241.3" width="0.1524" layer="97"/>
 <wire x1="259.08" y1="241.3" x2="358.14" y2="241.3" width="0.1524" layer="97"/>
-<wire x1="358.14" y1="241.3" x2="358.14" y2="200.66" width="0.1524" layer="97"/>
-<wire x1="358.14" y1="200.66" x2="358.14" y2="91.44" width="0.1524" layer="97"/>
+<wire x1="358.14" y1="241.3" x2="358.14" y2="198.12" width="0.1524" layer="97"/>
+<wire x1="358.14" y1="198.12" x2="358.14" y2="91.44" width="0.1524" layer="97"/>
 <wire x1="358.14" y1="91.44" x2="259.08" y2="91.44" width="0.1524" layer="97"/>
-<wire x1="259.08" y1="200.66" x2="358.14" y2="200.66" width="0.1524" layer="97"/>
+<wire x1="259.08" y1="198.12" x2="358.14" y2="198.12" width="0.1524" layer="97"/>
 <text x="261.62" y="195.58" size="1.778" layer="97">Sensors</text>
 <text x="261.62" y="236.22" size="1.778" layer="97">Flash Memory</text>
 <text x="403.86" y="45.72" size="2.54" layer="97" rot="R180">All capacitors 16 V rating, XR7
 All resistors 1W rating, 1%</text>
 <text x="101.6" y="220.98" size="1.778" layer="97">Battery Connector</text>
-<text x="109.22" y="236.22" size="1.778" layer="97">Not sure about this connection</text>
-<wire x1="17.78" y1="264.16" x2="17.78" y2="200.66" width="0.1524" layer="97"/>
-<wire x1="17.78" y1="200.66" x2="177.8" y2="200.66" width="0.1524" layer="97"/>
-<wire x1="177.8" y1="200.66" x2="177.8" y2="264.16" width="0.1524" layer="97"/>
+<wire x1="17.78" y1="264.16" x2="17.78" y2="198.12" width="0.1524" layer="97"/>
+<wire x1="17.78" y1="198.12" x2="162.56" y2="198.12" width="0.1524" layer="97"/>
+<wire x1="259.08" y1="241.3" x2="259.08" y2="264.16" width="0.1524" layer="97"/>
 <wire x1="259.08" y1="91.44" x2="162.56" y2="91.44" width="0.1524" layer="97"/>
 <wire x1="162.56" y1="91.44" x2="162.56" y2="198.12" width="0.1524" layer="97"/>
 <wire x1="162.56" y1="198.12" x2="259.08" y2="198.12" width="0.1524" layer="97"/>
-<text x="185.42" y="210.82" size="1.778" layer="97">- Add Value to VCC
+<text x="58.42" y="160.02" size="1.778" layer="97">- Add Value to VCC
 - Change Team Name
 - Small bypass caps on power suppliesVCC, AVCC, etc (close to pins)
-- Name battery charger
 - Recheck connections to "C7", is it really a bypass cap?
 - Maybe look into hooking up interrupt lines
 - Bypass cap on flash memory
@@ -7359,10 +7493,17 @@ All resistors 1W rating, 1%</text>
 - Check VBUS
 - Andrew gives us a Thumbs Up
 - 11-03-2016</text>
-<text x="111.76" y="228.6" size="1.778" layer="97">Add user power switch
-Add comparator for enable line
+<text x="58.42" y="187.96" size="1.778" layer="97">Add user power switch - DONE
+Add comparator for enable line - DONE
 Add second LDO for sensor</text>
 <text x="187.96" y="86.36" size="1.778" layer="97">NEEDS RGB LED ON GPIO BECAUSE OF REASONS</text>
+<text x="134.62" y="259.08" size="1.778" layer="97">Low-dropout 3.3V LDO</text>
+<text x="137.668" y="206.756" size="1.778" layer="97">Voltage comparator</text>
+<text x="53.34" y="231.14" size="1.778" layer="97">LiPo charger</text>
+<text x="210.82" y="96.52" size="1.778" layer="97">ATMega 32-bit uC</text>
+<text x="301.752" y="200.66" size="1.778" layer="97">1Meg Flash Memory</text>
+<text x="300.482" y="146.558" size="1.778" layer="97">6-DOF Accelerometer/
+Gyroscope</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="63.5" y="246.38"/>
@@ -7378,7 +7519,7 @@ Add second LDO for sensor</text>
 <instance part="U3" gate="G$1" x="312.42" y="172.72">
 <attribute name="PRICE" x="312.42" y="172.72" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="U$1" gate="G$1" x="312.42" y="218.44" smashed="yes"/>
+<instance part="U2" gate="G$1" x="312.42" y="218.44" smashed="yes"/>
 <instance part="SUPPLY9" gate="GND" x="294.64" y="152.4"/>
 <instance part="SUPPLY10" gate="GND" x="294.64" y="223.52"/>
 <instance part="C3" gate="G$1" x="294.64" y="160.02" smashed="yes" rot="R180">
@@ -7395,19 +7536,21 @@ Add second LDO for sensor</text>
 <instance part="SUPPLY5" gate="GND" x="91.44" y="238.76"/>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="G$2" x="325.12" y="0"/>
-<instance part="SUPPLY14" gate="GND" x="162.56" y="238.76"/>
-<instance part="C9" gate="G$1" x="162.56" y="246.38" rot="MR0"/>
-<instance part="C10" gate="G$1" x="170.18" y="246.38" rot="MR0"/>
-<instance part="SUPPLY16" gate="GND" x="170.18" y="238.76"/>
+<instance part="SUPPLY14" gate="GND" x="182.88" y="238.76"/>
+<instance part="C9" gate="G$1" x="182.88" y="246.38" rot="MR0"/>
+<instance part="C10" gate="G$1" x="190.5" y="246.38" rot="MR0"/>
+<instance part="SUPPLY16" gate="GND" x="190.5" y="238.76"/>
 <instance part="CN2" gate="G$1" x="93.98" y="223.52" rot="R180"/>
 <instance part="SUPPLY2" gate="GND" x="96.52" y="210.82"/>
-<instance part="U$2" gate="G$1" x="124.46" y="246.38"/>
-<instance part="SUPPLY13" gate="GND" x="104.14" y="241.3"/>
-<instance part="U$3" gate="G$1" x="215.9" y="132.08"/>
+<instance part="U$2" gate="G$1" x="144.78" y="246.38"/>
+<instance part="SUPPLY13" gate="GND" x="127" y="238.76" smashed="yes">
+<attribute name="VALUE" x="120.015" y="238.125" size="1.778" layer="96"/>
+</instance>
+<instance part="U6" gate="G$1" x="215.9" y="132.08"/>
 <instance part="P+1" gate="VCC" x="276.86" y="195.58"/>
 <instance part="P+2" gate="VCC" x="292.1" y="236.22"/>
-<instance part="P+3" gate="VCC" x="137.16" y="254"/>
-<instance part="P+4" gate="VCC" x="172.72" y="256.54"/>
+<instance part="P+3" gate="VCC" x="157.48" y="254"/>
+<instance part="P+4" gate="VCC" x="193.04" y="256.54"/>
 <instance part="C7" gate="G$1" x="165.1" y="134.62" smashed="yes" rot="MR0">
 <attribute name="NAME" x="168.656" y="135.001" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="168.656" y="129.921" size="1.778" layer="96" rot="MR0"/>
@@ -7443,6 +7586,19 @@ Add second LDO for sensor</text>
 <attribute name="MPN" x="177.8" y="175.26" size="1.27" layer="96" font="vector" rot="R270" display="off"/>
 <attribute name="VENDOR" x="177.8" y="175.26" size="1.27" layer="96" font="vector" rot="R270" display="off"/>
 <attribute name="VENDOR_PN" x="177.8" y="175.26" size="1.27" layer="96" font="vector" rot="R270" display="off"/>
+</instance>
+<instance part="S1" gate="&gt;NAME" x="116.84" y="233.68"/>
+<instance part="U5" gate="&gt;NAME" x="147.32" y="220.98" rot="MR0"/>
+<instance part="C13" gate="G$1" x="127" y="248.92"/>
+<instance part="R4" gate="G$1" x="182.88" y="231.14" rot="R180"/>
+<instance part="R3" gate="G$1" x="167.64" y="231.14" rot="R180"/>
+<instance part="R5" gate="G$1" x="198.12" y="231.14" rot="R180"/>
+<instance part="SUPPLY18" gate="GND" x="177.8" y="210.82" smashed="yes">
+<attribute name="VALUE" x="170.815" y="210.185" size="1.778" layer="96"/>
+</instance>
+<instance part="C14" gate="G$1" x="124.46" y="223.52"/>
+<instance part="SUPPLY19" gate="GND" x="124.46" y="213.36" smashed="yes">
+<attribute name="VALUE" x="117.475" y="212.725" size="1.778" layer="96"/>
 </instance>
 </instances>
 <busses>
@@ -7491,7 +7647,7 @@ Add second LDO for sensor</text>
 <junction x="294.64" y="157.48"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="VSS"/>
+<pinref part="U2" gate="G$1" pin="VSS"/>
 <pinref part="SUPPLY10" gate="GND" pin="GND"/>
 <wire x1="297.18" y1="226.06" x2="294.64" y2="226.06" width="0.1524" layer="91"/>
 </segment>
@@ -7523,24 +7679,18 @@ Add second LDO for sensor</text>
 <wire x1="96.52" y1="220.98" x2="96.52" y2="213.36" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="GND"/>
-<wire x1="114.3" y1="246.38" x2="104.14" y2="246.38" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="246.38" x2="104.14" y2="243.84" width="0.1524" layer="91"/>
-<pinref part="SUPPLY13" gate="GND" pin="GND"/>
-</segment>
-<segment>
 <pinref part="C7" gate="G$1" pin="2"/>
 <wire x1="165.1" y1="129.54" x2="165.1" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="UGND"/>
-<pinref part="U$3" gate="G$1" pin="GND"/>
+<pinref part="U6" gate="G$1" pin="UGND"/>
+<pinref part="U6" gate="G$1" pin="GND"/>
 <wire x1="193.04" y1="114.3" x2="193.04" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="GND1"/>
+<pinref part="U6" gate="G$1" pin="GND1"/>
 <wire x1="193.04" y1="106.68" x2="193.04" y2="109.22" width="0.1524" layer="91"/>
 <junction x="193.04" y="109.22"/>
-<pinref part="U$3" gate="G$1" pin="GND2"/>
+<pinref part="U6" gate="G$1" pin="GND2"/>
 <wire x1="193.04" y1="106.68" x2="193.04" y2="104.14" width="0.1524" layer="91"/>
 <junction x="193.04" y="106.68"/>
-<pinref part="U$3" gate="G$1" pin="GND3"/>
+<pinref part="U6" gate="G$1" pin="GND3"/>
 <junction x="193.04" y="104.14"/>
 <wire x1="165.1" y1="114.3" x2="193.04" y2="114.3" width="0.1524" layer="91"/>
 <junction x="193.04" y="114.3"/>
@@ -7550,7 +7700,7 @@ Add second LDO for sensor</text>
 <junction x="193.04" y="101.6"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="PE2(!HWB)"/>
+<pinref part="U6" gate="G$1" pin="PE2(!HWB)"/>
 <wire x1="241.3" y1="157.48" x2="246.38" y2="157.48" width="0.1524" layer="91"/>
 <wire x1="246.38" y1="157.48" x2="246.38" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="SUPPLY17" gate="GND" pin="GND"/>
@@ -7572,6 +7722,20 @@ Add second LDO for sensor</text>
 <wire x1="168.91" y1="125.984" x2="172.72" y2="125.984" width="0.1524" layer="91"/>
 <junction x="172.72" y="125.984"/>
 </segment>
+<segment>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="203.2" y1="231.14" x2="203.2" y2="213.36" width="0.1524" layer="91"/>
+<pinref part="U5" gate="&gt;NAME" pin="GND"/>
+<wire x1="203.2" y1="213.36" x2="177.8" y2="213.36" width="0.1524" layer="91"/>
+<pinref part="SUPPLY18" gate="GND" pin="GND"/>
+<wire x1="177.8" y1="213.36" x2="157.48" y2="213.36" width="0.1524" layer="91"/>
+<junction x="177.8" y="213.36"/>
+</segment>
+<segment>
+<pinref part="C14" gate="G$1" pin="2"/>
+<wire x1="124.46" y1="218.44" x2="124.46" y2="215.9" width="0.1524" layer="91"/>
+<pinref part="SUPPLY19" gate="GND" pin="GND"/>
+</segment>
 </net>
 <net name="N$4" class="0">
 <segment>
@@ -7584,7 +7748,7 @@ Add second LDO for sensor</text>
 <net name="CLK" class="0">
 <segment>
 <wire x1="284.48" y1="127" x2="284.48" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="C"/>
+<pinref part="U2" gate="G$1" pin="C"/>
 <wire x1="284.48" y1="134.62" x2="284.48" y2="215.9" width="0.1524" layer="91"/>
 <wire x1="284.48" y1="215.9" x2="297.18" y2="215.9" width="0.1524" layer="91"/>
 <wire x1="284.48" y1="134.62" x2="345.44" y2="134.62" width="0.1524" layer="91"/>
@@ -7594,14 +7758,14 @@ Add second LDO for sensor</text>
 <wire x1="345.44" y1="185.42" x2="327.66" y2="185.42" width="0.1524" layer="91"/>
 <wire x1="241.3" y1="127" x2="284.48" y2="127" width="0.1524" layer="91"/>
 <label x="269.24" y="127" size="1.778" layer="95"/>
-<pinref part="U$3" gate="G$1" pin="PB1(SCK)"/>
+<pinref part="U6" gate="G$1" pin="PB1(SCK)"/>
 </segment>
 </net>
 <net name="MISO" class="0">
 <segment>
 <wire x1="248.92" y1="129.54" x2="350.52" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="350.52" y1="129.54" x2="350.52" y2="177.8" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="Q"/>
+<pinref part="U2" gate="G$1" pin="Q"/>
 <wire x1="350.52" y1="177.8" x2="350.52" y2="182.88" width="0.1524" layer="91"/>
 <wire x1="350.52" y1="182.88" x2="350.52" y2="223.52" width="0.1524" layer="91"/>
 <wire x1="350.52" y1="223.52" x2="327.66" y2="223.52" width="0.1524" layer="91"/>
@@ -7612,7 +7776,7 @@ Add second LDO for sensor</text>
 <wire x1="327.66" y1="177.8" x2="350.52" y2="177.8" width="0.1524" layer="91"/>
 <junction x="350.52" y="177.8"/>
 <label x="269.24" y="129.54" size="1.778" layer="95"/>
-<pinref part="U$3" gate="G$1" pin="PB3(PDO/MISO)"/>
+<pinref part="U6" gate="G$1" pin="PB3(PDO/MISO)"/>
 <wire x1="241.3" y1="132.08" x2="248.92" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="248.92" y1="132.08" x2="248.92" y2="129.54" width="0.1524" layer="91"/>
 </segment>
@@ -7620,7 +7784,7 @@ Add second LDO for sensor</text>
 <net name="MOSI" class="0">
 <segment>
 <wire x1="254" y1="132.08" x2="281.94" y2="132.08" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="D"/>
+<pinref part="U2" gate="G$1" pin="D"/>
 <wire x1="281.94" y1="132.08" x2="281.94" y2="218.44" width="0.1524" layer="91"/>
 <wire x1="281.94" y1="218.44" x2="297.18" y2="218.44" width="0.1524" layer="91"/>
 <wire x1="281.94" y1="132.08" x2="347.98" y2="132.08" width="0.1524" layer="91"/>
@@ -7629,16 +7793,16 @@ Add second LDO for sensor</text>
 <pinref part="U3" gate="G$1" pin="SDA"/>
 <wire x1="347.98" y1="187.96" x2="327.66" y2="187.96" width="0.1524" layer="91"/>
 <label x="269.24" y="132.08" size="1.778" layer="95"/>
-<pinref part="U$3" gate="G$1" pin="PB2(PDI/MOSI)"/>
+<pinref part="U6" gate="G$1" pin="PB2(PDI/MOSI)"/>
 <wire x1="241.3" y1="129.54" x2="254" y2="132.08" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="MEM_EN" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="~S"/>
+<pinref part="U2" gate="G$1" pin="~S"/>
 <wire x1="297.18" y1="213.36" x2="287.02" y2="213.36" width="0.1524" layer="91"/>
 <wire x1="287.02" y1="213.36" x2="287.02" y2="142.24" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="PF1(ADC1)"/>
+<pinref part="U6" gate="G$1" pin="PF1(ADC1)"/>
 <wire x1="241.3" y1="172.72" x2="256.54" y2="172.72" width="0.1524" layer="91"/>
 <wire x1="256.54" y1="172.72" x2="256.54" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="256.54" y1="142.24" x2="287.02" y2="142.24" width="0.1524" layer="91"/>
@@ -7650,7 +7814,7 @@ Add second LDO for sensor</text>
 <pinref part="U3" gate="G$1" pin="CS(XM)"/>
 <wire x1="342.9" y1="139.7" x2="342.9" y2="180.34" width="0.1524" layer="91"/>
 <wire x1="342.9" y1="180.34" x2="327.66" y2="180.34" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="PF4(ADC4/TCK)"/>
+<pinref part="U6" gate="G$1" pin="PF4(ADC4/TCK)"/>
 <wire x1="241.3" y1="170.18" x2="254" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="254" y1="170.18" x2="254" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="254" y1="139.7" x2="342.9" y2="139.7" width="0.1524" layer="91"/>
@@ -7682,18 +7846,18 @@ Add second LDO for sensor</text>
 </net>
 <net name="VCC" class="0">
 <segment>
-<wire x1="162.56" y1="248.92" x2="170.18" y2="248.92" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="248.92" x2="172.72" y2="248.92" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="248.92" x2="190.5" y2="248.92" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="248.92" x2="193.04" y2="248.92" width="0.1524" layer="91"/>
 <pinref part="C9" gate="G$1" pin="1"/>
 <pinref part="C10" gate="G$1" pin="1"/>
-<junction x="170.18" y="248.92"/>
-<wire x1="172.72" y1="248.92" x2="172.72" y2="254" width="0.1524" layer="91"/>
+<junction x="190.5" y="248.92"/>
+<wire x1="193.04" y1="248.92" x2="193.04" y2="254" width="0.1524" layer="91"/>
 <pinref part="P+4" gate="VCC" pin="VCC"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="OUT"/>
-<wire x1="134.62" y1="248.92" x2="137.16" y2="248.92" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="248.92" x2="137.16" y2="251.46" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="248.92" x2="157.48" y2="248.92" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="248.92" x2="157.48" y2="251.46" width="0.1524" layer="91"/>
 <pinref part="P+3" gate="VCC" pin="VCC"/>
 </segment>
 <segment>
@@ -7715,22 +7879,22 @@ Add second LDO for sensor</text>
 </segment>
 <segment>
 <wire x1="292.1" y1="210.82" x2="292.1" y2="228.6" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="~W"/>
+<pinref part="U2" gate="G$1" pin="~W"/>
 <wire x1="292.1" y1="228.6" x2="292.1" y2="233.68" width="0.1524" layer="91"/>
 <wire x1="297.18" y1="210.82" x2="292.1" y2="210.82" width="0.1524" layer="91"/>
 <junction x="292.1" y="210.82"/>
-<pinref part="U$1" gate="G$1" pin="~HOLD"/>
+<pinref part="U2" gate="G$1" pin="~HOLD"/>
 <wire x1="297.18" y1="208.28" x2="292.1" y2="208.28" width="0.1524" layer="91"/>
 <wire x1="292.1" y1="208.28" x2="292.1" y2="210.82" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="VCC"/>
+<pinref part="U2" gate="G$1" pin="VCC"/>
 <wire x1="297.18" y1="228.6" x2="292.1" y2="228.6" width="0.1524" layer="91"/>
 <junction x="292.1" y="228.6"/>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="AVCC"/>
-<pinref part="U$3" gate="G$1" pin="VCC1"/>
-<pinref part="U$3" gate="G$1" pin="VCC"/>
+<pinref part="U6" gate="G$1" pin="AVCC"/>
+<pinref part="U6" gate="G$1" pin="VCC1"/>
+<pinref part="U6" gate="G$1" pin="VCC"/>
 <pinref part="P+6" gate="VCC" pin="VCC"/>
 <wire x1="182.88" y1="162.56" x2="182.88" y2="165.1" width="0.1524" layer="91"/>
 <junction x="182.88" y="162.56"/>
@@ -7740,14 +7904,14 @@ Add second LDO for sensor</text>
 <junction x="182.88" y="160.02"/>
 <wire x1="182.88" y1="160.02" x2="182.88" y2="154.94" width="0.1524" layer="91"/>
 <wire x1="182.88" y1="154.94" x2="193.04" y2="154.94" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="UCAP"/>
+<pinref part="U6" gate="G$1" pin="UCAP"/>
 <wire x1="182.88" y1="152.4" x2="182.88" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="182.88" y1="139.7" x2="193.04" y2="139.7" width="0.1524" layer="91"/>
 <pinref part="C7" gate="G$1" pin="1"/>
 <wire x1="165.1" y1="137.16" x2="165.1" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="182.88" y1="139.7" x2="165.1" y2="139.7" width="0.1524" layer="91"/>
 <junction x="182.88" y="139.7"/>
-<pinref part="U$3" gate="G$1" pin="AVCC1"/>
+<pinref part="U6" gate="G$1" pin="AVCC1"/>
 <wire x1="182.88" y1="152.4" x2="193.04" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="182.88" y1="154.94" x2="182.88" y2="152.4" width="0.1524" layer="91"/>
 <junction x="182.88" y="154.94"/>
@@ -7764,30 +7928,11 @@ Add second LDO for sensor</text>
 <pinref part="U3" gate="G$1" pin="CS(G)"/>
 <wire x1="340.36" y1="137.16" x2="340.36" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="340.36" y1="175.26" x2="327.66" y2="175.26" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="PF5(ADC5/TMS)"/>
+<pinref part="U6" gate="G$1" pin="PF5(ADC5/TMS)"/>
 <wire x1="241.3" y1="167.64" x2="251.46" y2="167.64" width="0.1524" layer="91"/>
 <wire x1="251.46" y1="167.64" x2="251.46" y2="137.16" width="0.1524" layer="91"/>
 <wire x1="251.46" y1="137.16" x2="340.36" y2="137.16" width="0.1524" layer="91"/>
 <label x="251.46" y="167.64" size="1.778" layer="95" rot="R270" xref="yes"/>
-</segment>
-</net>
-<net name="N$17" class="0">
-<segment>
-<pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="91.44" y1="251.46" x2="96.52" y2="251.46" width="0.1524" layer="91"/>
-<junction x="91.44" y="251.46"/>
-<pinref part="IC1" gate="G$1" pin="OUT"/>
-<wire x1="76.2" y1="251.46" x2="91.44" y2="251.46" width="0.1524" layer="91"/>
-<wire x1="96.52" y1="223.52" x2="96.52" y2="251.46" width="0.1524" layer="91"/>
-<pinref part="CN2" gate="G$1" pin="2"/>
-<wire x1="96.52" y1="251.46" x2="109.22" y2="251.46" width="0.1524" layer="91"/>
-<junction x="96.52" y="251.46"/>
-<pinref part="U$2" gate="G$1" pin="IN"/>
-<pinref part="U$2" gate="G$1" pin="EN"/>
-<wire x1="109.22" y1="251.46" x2="114.3" y2="251.46" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="241.3" x2="109.22" y2="241.3" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="241.3" x2="109.22" y2="251.46" width="0.1524" layer="91"/>
-<junction x="109.22" y="251.46"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -7808,7 +7953,7 @@ Add second LDO for sensor</text>
 <label x="30.48" y="243.84" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="D-"/>
+<pinref part="U6" gate="G$1" pin="D-"/>
 <wire x1="193.04" y1="147.32" x2="193.04" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="149.86" x2="190.5" y2="149.86" width="0.1524" layer="91"/>
 <label x="190.5" y="149.86" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
@@ -7821,7 +7966,7 @@ Add second LDO for sensor</text>
 <label x="30.48" y="241.3" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="D+"/>
+<pinref part="U6" gate="G$1" pin="D+"/>
 <wire x1="193.04" y1="144.78" x2="193.04" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="193.04" y1="142.24" x2="190.5" y2="142.24" width="0.1524" layer="91"/>
 <label x="190.5" y="142.24" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
@@ -7829,14 +7974,14 @@ Add second LDO for sensor</text>
 </net>
 <net name="VBUS1" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="VBUS"/>
+<pinref part="U6" gate="G$1" pin="VBUS"/>
 <wire x1="193.04" y1="170.18" x2="187.96" y2="170.18" width="0.1524" layer="91"/>
 <label x="187.96" y="170.18" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="/RESET"/>
+<pinref part="U6" gate="G$1" pin="/RESET"/>
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="193.04" y1="175.26" x2="185.42" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="185.42" y1="175.26" x2="185.42" y2="177.8" width="0.1524" layer="91"/>
@@ -7847,7 +7992,7 @@ Add second LDO for sensor</text>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="XTAL1"/>
+<pinref part="U6" gate="G$1" pin="XTAL1"/>
 <wire x1="193.04" y1="129.54" x2="190.5" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="129.54" x2="190.5" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="132.08" x2="185.42" y2="132.08" width="0.1524" layer="91"/>
@@ -7860,7 +8005,7 @@ Add second LDO for sensor</text>
 </net>
 <net name="N$5" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="XTAL2"/>
+<pinref part="U6" gate="G$1" pin="XTAL2"/>
 <wire x1="193.04" y1="121.92" x2="190.5" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="121.92" x2="190.5" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="190.5" y1="119.38" x2="185.42" y2="119.38" width="0.1524" layer="91"/>
@@ -7877,6 +8022,90 @@ Add second LDO for sensor</text>
 <pinref part="C8" gate="G$1" pin="1"/>
 <pinref part="S2" gate="G$1" pin="P"/>
 <wire x1="170.18" y1="175.26" x2="172.72" y2="175.26" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$7" class="0">
+<segment>
+<pinref part="C13" gate="G$1" pin="2"/>
+<wire x1="127" y1="243.84" x2="127" y2="241.3" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="GND"/>
+<wire x1="134.62" y1="246.38" x2="132.08" y2="246.38" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="246.38" x2="132.08" y2="243.84" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="243.84" x2="127" y2="243.84" width="0.1524" layer="91"/>
+<junction x="127" y="243.84"/>
+</segment>
+</net>
+<net name="N$13" class="0">
+<segment>
+<pinref part="C1" gate="G$1" pin="1"/>
+<wire x1="91.44" y1="251.46" x2="96.52" y2="251.46" width="0.1524" layer="91"/>
+<junction x="91.44" y="251.46"/>
+<pinref part="IC1" gate="G$1" pin="OUT"/>
+<wire x1="76.2" y1="251.46" x2="91.44" y2="251.46" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="223.52" x2="96.52" y2="251.46" width="0.1524" layer="91"/>
+<pinref part="CN2" gate="G$1" pin="2"/>
+<wire x1="96.52" y1="251.46" x2="101.6" y2="251.46" width="0.1524" layer="91"/>
+<junction x="96.52" y="251.46"/>
+<pinref part="U$2" gate="G$1" pin="IN"/>
+<pinref part="S1" gate="&gt;NAME" pin="COM"/>
+<wire x1="101.6" y1="251.46" x2="134.62" y2="251.46" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="233.68" x2="101.6" y2="233.68" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="233.68" x2="101.6" y2="251.46" width="0.1524" layer="91"/>
+<junction x="101.6" y="251.46"/>
+</segment>
+</net>
+<net name="N$12" class="0">
+<segment>
+<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="R4" gate="G$1" pin="2"/>
+<wire x1="172.72" y1="231.14" x2="175.26" y2="231.14" width="0.1524" layer="91"/>
+<pinref part="U5" gate="&gt;NAME" pin="VHYST"/>
+<wire x1="175.26" y1="231.14" x2="177.8" y2="231.14" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="223.52" x2="175.26" y2="223.52" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="223.52" x2="175.26" y2="231.14" width="0.1524" layer="91"/>
+<junction x="175.26" y="231.14"/>
+</segment>
+</net>
+<net name="N$14" class="0">
+<segment>
+<pinref part="R4" gate="G$1" pin="1"/>
+<pinref part="R5" gate="G$1" pin="2"/>
+<wire x1="187.96" y1="231.14" x2="190.5" y2="231.14" width="0.1524" layer="91"/>
+<pinref part="U5" gate="&gt;NAME" pin="VTH"/>
+<wire x1="190.5" y1="231.14" x2="193.04" y2="231.14" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="220.98" x2="190.5" y2="220.98" width="0.1524" layer="91"/>
+<wire x1="190.5" y1="220.98" x2="190.5" y2="231.14" width="0.1524" layer="91"/>
+<junction x="190.5" y="231.14"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="U5" gate="&gt;NAME" pin="/BATTLO"/>
+<wire x1="137.16" y1="218.44" x2="132.08" y2="218.44" width="0.1524" layer="91"/>
+<wire x1="132.08" y1="218.44" x2="132.08" y2="241.3" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="EN"/>
+<wire x1="132.08" y1="241.3" x2="134.62" y2="241.3" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$15" class="0">
+<segment>
+<pinref part="S1" gate="&gt;NAME" pin="P2"/>
+<wire x1="124.46" y1="226.06" x2="124.46" y2="231.14" width="0.1524" layer="91"/>
+<pinref part="C14" gate="G$1" pin="1"/>
+<pinref part="U5" gate="&gt;NAME" pin="VLOGIC"/>
+<wire x1="137.16" y1="226.06" x2="137.16" y2="231.14" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="231.14" x2="137.16" y2="233.68" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="233.68" x2="160.02" y2="233.68" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="233.68" x2="160.02" y2="231.14" width="0.1524" layer="91"/>
+<pinref part="U5" gate="&gt;NAME" pin="BATT"/>
+<wire x1="160.02" y1="231.14" x2="160.02" y2="228.6" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="228.6" x2="157.48" y2="228.6" width="0.1524" layer="91"/>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="160.02" y1="231.14" x2="162.56" y2="231.14" width="0.1524" layer="91"/>
+<junction x="160.02" y="231.14"/>
+<wire x1="124.46" y1="231.14" x2="137.16" y2="231.14" width="0.1524" layer="91"/>
+<junction x="124.46" y="231.14"/>
+<junction x="137.16" y="231.14"/>
 </segment>
 </net>
 </nets>
