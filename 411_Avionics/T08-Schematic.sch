@@ -7359,6 +7359,10 @@ All resistors 1W rating, 1%</text>
 - Check VBUS
 - Andrew gives us a Thumbs Up
 - 11-03-2016</text>
+<text x="111.76" y="228.6" size="1.778" layer="97">Add user power switch
+Add comparator for enable line
+Add second LDO for sensor</text>
+<text x="187.96" y="86.36" size="1.778" layer="97">NEEDS RGB LED ON GPIO BECAUSE OF REASONS</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="63.5" y="246.38"/>
