@@ -8123,7 +8123,7 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 <part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY7" library="supply2" deviceset="GND" device=""/>
 <part name="U3" library="LSM9DS0" deviceset="LSM9DS0" device=""/>
-<part name="U2" library="SOIC127P600X175-8N" deviceset="M25P10-AVMN6TP_TR" device=""/>
+<part name="U2" library="SOIC127P600X175-8N" deviceset="M25P10-AVMN6TP_TR" device="" value=""/>
 <part name="SUPPLY9" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY10" library="supply2" deviceset="GND" device=""/>
 <part name="C3" library="rcl" deviceset="C-EU" device="C0805" value="4.7µ"/>
@@ -8137,7 +8137,7 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 <part name="C9" library="rcl" deviceset="C-EU" device="C0805" value="2.2µ"/>
 <part name="C10" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
 <part name="SUPPLY16" library="supply2" deviceset="GND" device=""/>
-<part name="CN2" library="adafruit" deviceset="JST_2PIN" device="-SMT-RA" value="JST-PH-2-SMT-RA"/>
+<part name="J3" library="adafruit" deviceset="JST_2PIN" device="-SMT-RA" value="JST-PH-2-SMT-RA"/>
 <part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
 <part name="U$2" library="adafruit" deviceset="LP5907" device=""/>
 <part name="SUPPLY13" library="supply2" deviceset="GND" device=""/>
@@ -8184,7 +8184,7 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 <part name="C18" library="rcl" deviceset="C-EU" device="C0805" value="1µ"/>
 <part name="SUPPLY21" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY22" library="supply2" deviceset="GND" device=""/>
-<part name="D1" library="LTST-C19HE1WT" deviceset="LTST-C19HE1WT" device="">
+<part name="LED1" library="LTST-C19HE1WT" deviceset="LTST-C19HE1WT" device="">
 <attribute name="PRICE" value="0.59 USD"/>
 <attribute name="VENDOR" value="DIGIKEY"/>
 <attribute name="VENDOR_PN" value="160-2162-1-ND"/>
@@ -8279,7 +8279,7 @@ Gyroscope</text>
 <instance part="C9" gate="G$1" x="223.52" y="241.3" rot="MR0"/>
 <instance part="C10" gate="G$1" x="231.14" y="241.3" rot="MR0"/>
 <instance part="SUPPLY16" gate="GND" x="231.14" y="233.68"/>
-<instance part="CN2" gate="G$1" x="93.98" y="223.52" smashed="yes" rot="R180">
+<instance part="J3" gate="G$1" x="93.98" y="223.52" smashed="yes" rot="R180">
 <attribute name="NAME" x="100.33" y="217.805" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="101.6" y="229.87" size="1.27" layer="96" rot="R270"/>
 </instance>
@@ -8355,7 +8355,7 @@ Gyroscope</text>
 <instance part="C18" gate="G$1" x="104.14" y="152.4" rot="MR0"/>
 <instance part="SUPPLY21" gate="GND" x="111.76" y="144.78"/>
 <instance part="SUPPLY22" gate="GND" x="104.14" y="144.78"/>
-<instance part="D1" gate="G$1" x="220.98" y="154.94">
+<instance part="LED1" gate="G$1" x="220.98" y="154.94">
 <attribute name="VENDOR" x="220.98" y="154.94" size="1.778" layer="96" display="off"/>
 <attribute name="VENDOR_PN" x="220.98" y="154.94" size="1.778" layer="96" display="off"/>
 </instance>
@@ -8438,7 +8438,7 @@ Gyroscope</text>
 <pinref part="SUPPLY16" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="CN2" gate="G$1" pin="1"/>
+<pinref part="J3" gate="G$1" pin="1"/>
 <pinref part="SUPPLY2" gate="GND" pin="GND"/>
 <wire x1="96.52" y1="220.98" x2="96.52" y2="213.36" width="0.1524" layer="91"/>
 </segment>
@@ -8528,7 +8528,7 @@ Gyroscope</text>
 </segment>
 <segment>
 <pinref part="SUPPLY23" gate="GND" pin="GND"/>
-<pinref part="D1" gate="G$1" pin="4"/>
+<pinref part="LED1" gate="G$1" pin="4"/>
 <wire x1="231.14" y1="139.7" x2="231.14" y2="154.94" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -8845,7 +8845,7 @@ Gyroscope</text>
 <pinref part="IC1" gate="G$1" pin="OUT"/>
 <wire x1="76.2" y1="251.46" x2="91.44" y2="251.46" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="223.52" x2="96.52" y2="251.46" width="0.1524" layer="91"/>
-<pinref part="CN2" gate="G$1" pin="2"/>
+<pinref part="J3" gate="G$1" pin="2"/>
 <wire x1="96.52" y1="251.46" x2="101.6" y2="251.46" width="0.1524" layer="91"/>
 <junction x="96.52" y="251.46"/>
 <pinref part="S1" gate="&gt;NAME" pin="COM"/>
@@ -8942,7 +8942,7 @@ Gyroscope</text>
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="D1" gate="G$1" pin="1"/>
+<pinref part="LED1" gate="G$1" pin="1"/>
 <wire x1="215.9" y1="160.02" x2="193.04" y2="160.02" width="0.1524" layer="91"/>
 <pinref part="R7" gate="G$1" pin="2"/>
 <wire x1="193.04" y1="154.94" x2="193.04" y2="160.02" width="0.1524" layer="91"/>
@@ -8950,7 +8950,7 @@ Gyroscope</text>
 </net>
 <net name="N$7" class="0">
 <segment>
-<pinref part="D1" gate="G$1" pin="2"/>
+<pinref part="LED1" gate="G$1" pin="2"/>
 <wire x1="215.9" y1="154.94" x2="203.2" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="2"/>
 <wire x1="203.2" y1="149.86" x2="203.2" y2="154.94" width="0.1524" layer="91"/>
@@ -8958,7 +8958,7 @@ Gyroscope</text>
 </net>
 <net name="N$8" class="0">
 <segment>
-<pinref part="D1" gate="G$1" pin="3"/>
+<pinref part="LED1" gate="G$1" pin="3"/>
 <wire x1="213.36" y1="149.86" x2="215.9" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="R8" gate="G$1" pin="2"/>
 <wire x1="213.36" y1="147.32" x2="213.36" y2="149.86" width="0.1524" layer="91"/>
