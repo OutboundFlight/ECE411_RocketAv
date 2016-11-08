@@ -8116,8 +8116,8 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 </classes>
 <parts>
 <part name="IC1" library="texas" deviceset="BQ24022" device=""/>
-<part name="C1" library="rcl" deviceset="C-EU" device="050-025X075" value="1µ"/>
-<part name="C2" library="rcl" deviceset="C-EU" device="050-025X075" value="1µ"/>
+<part name="C1" library="rcl" deviceset="C-EU" device="C0805" value="1µ"/>
+<part name="C2" library="rcl" deviceset="C-EU" device="C0805" value="1µ"/>
 <part name="SUPPLY3" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY4" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
@@ -8168,12 +8168,12 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 </part>
 <part name="S1" library="tinyav-lib" deviceset="COM-00102" device=""/>
 <part name="U5" library="tinyav-lib" deviceset="LTC1998" device=""/>
-<part name="C13" library="rcl" deviceset="C-EU" device="050-025X075" value="1µ"/>
+<part name="C13" library="rcl" deviceset="C-EU" device="C0805" value="1µ"/>
 <part name="R4" library="rcl" deviceset="R-US_" device="R0805" value="56.2k"/>
 <part name="R3" library="rcl" deviceset="R-US_" device="R0805" value="649k"/>
 <part name="R5" library="rcl" deviceset="R-US_" device="R0805" value="348k"/>
 <part name="SUPPLY18" library="supply2" deviceset="GND" device=""/>
-<part name="C14" library="rcl" deviceset="C-EU" device="050-025X075" value="0.1u"/>
+<part name="C14" library="rcl" deviceset="C-EU" device="C0805" value="0.1u"/>
 <part name="SUPPLY19" library="supply2" deviceset="GND" device=""/>
 <part name="J1" library="SparkFun-Connectors" deviceset="USB" device="-MICROB"/>
 <part name="C15" library="rcl" deviceset="C-EU" device="C0805" value="1µ"/>
@@ -8196,8 +8196,8 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 <part name="R9" library="rcl" deviceset="R-US_" device="R0805" value="0"/>
 <part name="R10" library="rcl" deviceset="R-US_" device="R0805" value="0"/>
 <part name="R11" library="rcl" deviceset="R-US_" device="R0805" value="0"/>
-<part name="R1" library="rcl" deviceset="R-US_" device="0309/12" value="4k"/>
-<part name="R2" library="rcl" deviceset="R-US_" device="0309/12" value="10k"/>
+<part name="R1" library="rcl" deviceset="R-US_" device="R0805" value="4k"/>
+<part name="R2" library="rcl" deviceset="R-US_" device="R0805" value="10k"/>
 </parts>
 <sheets>
 <sheet>
