@@ -8,20 +8,20 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -30,8 +30,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -39,19 +39,19 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
-<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
-<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="yes" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="yes" active="no"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -8116,7 +8116,7 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 </classes>
 <parts>
 <part name="IC1" library="texas" deviceset="BQ24022" device=""/>
-<part name="C1" library="rcl" deviceset="C-EU" device="C0805" value="1µ"/>
+<part name="C1" library="rcl" deviceset="C-EU" device="C0603" value="1µ"/>
 <part name="C2" library="rcl" deviceset="C-EU" device="C0805" value="1µ"/>
 <part name="SUPPLY3" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY4" library="supply2" deviceset="GND" device=""/>
@@ -8126,16 +8126,16 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 <part name="U2" library="SOIC127P600X175-8N" deviceset="M25P10-AVMN6TP_TR" device="" value="M25P10-AVMN6TP_TR"/>
 <part name="SUPPLY9" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY10" library="supply2" deviceset="GND" device=""/>
-<part name="C3" library="rcl" deviceset="C-EU" device="C0805" value="4.7µ"/>
-<part name="C4" library="rcl" deviceset="C-EU" device="C0805" value=".22µ"/>
-<part name="C5" library="rcl" deviceset="C-EU" device="C0805" value="2.2µ"/>
-<part name="C6" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
+<part name="C3" library="rcl" deviceset="C-EU" device="C0603" value="4.7µ"/>
+<part name="C4" library="rcl" deviceset="C-EU" device="C0603" value=".22µ"/>
+<part name="C5" library="rcl" deviceset="C-EU" device="C0603" value="2.2µ"/>
+<part name="C6" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="SUPPLY12" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY5" library="supply2" deviceset="GND" device=""/>
 <part name="FRAME1" library="frames" deviceset="FRAME_B_L" device="" value="T08-SCHEMATIC"/>
 <part name="SUPPLY14" library="supply2" deviceset="GND" device=""/>
-<part name="C9" library="rcl" deviceset="C-EU" device="C0805" value="2.2µ"/>
-<part name="C10" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
+<part name="C9" library="rcl" deviceset="C-EU" device="C0603" value="2.2µ"/>
+<part name="C10" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="SUPPLY16" library="supply2" deviceset="GND" device=""/>
 <part name="J3" library="adafruit" deviceset="JST_2PIN" device="-SMT-RA" value="JST-PH-2-SMT-RA"/>
 <part name="SUPPLY2" library="supply2" deviceset="GND" device=""/>
@@ -8146,20 +8146,20 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 <part name="P+2" library="supply1" deviceset="VCC" device="" value="+3.3V"/>
 <part name="P+3" library="supply1" deviceset="VCC" device="" value="+3.3V"/>
 <part name="P+4" library="supply1" deviceset="VCC" device="" value="+3.3V"/>
-<part name="C7" library="rcl" deviceset="C-EU" device="C0805" value="1µ"/>
+<part name="C7" library="rcl" deviceset="C-EU" device="C0603" value="1µ"/>
 <part name="P+6" library="supply1" deviceset="VCC" device="" value="+3.3V"/>
 <part name="SUPPLY15" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY17" library="supply2" deviceset="GND" device=""/>
 <part name="P+5" library="supply1" deviceset="VCC" device="" value="+3.3V"/>
-<part name="C8" library="rcl" deviceset="C-EU" device="C0805" value="10u"/>
+<part name="C8" library="rcl" deviceset="C-EU" device="C0603" value="10u"/>
 <part name="SUPPLY8" library="supply2" deviceset="GND" device=""/>
 <part name="X1" library="IQD-Frequency-Products" deviceset="CRYSTALS-NOGND" device="-HC49/4H" value="8MHz">
 <attribute name="MPN" value="ATS080B"/>
 <attribute name="VENDOR" value="DIGIKEY"/>
 <attribute name="VENDOR_PN" value="CTX900-ND"/>
 </part>
-<part name="C11" library="rcl" deviceset="C-EU" device="C0805" value="22p"/>
-<part name="C12" library="rcl" deviceset="C-EU" device="C0805" value="22p"/>
+<part name="C11" library="rcl" deviceset="C-EU" device="C0603" value="22p"/>
+<part name="C12" library="rcl" deviceset="C-EU" device="C0603" value="22p"/>
 <part name="SUPPLY11" library="supply2" deviceset="GND" device=""/>
 <part name="S2" library="switch-ck" deviceset="PTS645S???SMTR" device="" value="PTS645SM43SMTR92">
 <attribute name="MPN" value="PTS645SM43SMTR92 LFS"/>
@@ -8168,20 +8168,20 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 </part>
 <part name="S1" library="tinyav-lib" deviceset="COM-00102" device=""/>
 <part name="U5" library="tinyav-lib" deviceset="LTC1998" device=""/>
-<part name="C13" library="rcl" deviceset="C-EU" device="C0805" value="1µ"/>
-<part name="R4" library="rcl" deviceset="R-US_" device="R0805" value="56.2k"/>
-<part name="R3" library="rcl" deviceset="R-US_" device="R0805" value="649k"/>
-<part name="R5" library="rcl" deviceset="R-US_" device="R0805" value="348k"/>
+<part name="C13" library="rcl" deviceset="C-EU" device="C0603" value="1µ"/>
+<part name="R4" library="rcl" deviceset="R-US_" device="R0603" value="56.2k"/>
+<part name="R3" library="rcl" deviceset="R-US_" device="R0603" value="649k"/>
+<part name="R5" library="rcl" deviceset="R-US_" device="R0603" value="348k"/>
 <part name="SUPPLY18" library="supply2" deviceset="GND" device=""/>
-<part name="C14" library="rcl" deviceset="C-EU" device="C0805" value="0.1u"/>
+<part name="C14" library="rcl" deviceset="C-EU" device="C0603" value="0.1u"/>
 <part name="SUPPLY19" library="supply2" deviceset="GND" device=""/>
 <part name="J1" library="SparkFun-Connectors" deviceset="USB" device="-MICROB"/>
-<part name="C15" library="rcl" deviceset="C-EU" device="C0805" value="1µ"/>
-<part name="C16" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
+<part name="C15" library="rcl" deviceset="C-EU" device="C0603" value="1µ"/>
+<part name="C16" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
 <part name="SUPPLY6" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY20" library="supply2" deviceset="GND" device=""/>
-<part name="C17" library="rcl" deviceset="C-EU" device="C0805" value="100n"/>
-<part name="C18" library="rcl" deviceset="C-EU" device="C0805" value="1µ"/>
+<part name="C17" library="rcl" deviceset="C-EU" device="C0603" value="100n"/>
+<part name="C18" library="rcl" deviceset="C-EU" device="C0603" value="1µ"/>
 <part name="SUPPLY21" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY22" library="supply2" deviceset="GND" device=""/>
 <part name="LED1" library="LTST-C19HE1WT" deviceset="LTST-C19HE1WT" device="">
@@ -8190,13 +8190,13 @@ For boards designed to be plugged directly into a USB slot. If possible, ensure 
 <attribute name="VENDOR_PN" value="160-2162-1-ND"/>
 </part>
 <part name="SUPPLY23" library="supply2" deviceset="GND" device=""/>
-<part name="R6" library="rcl" deviceset="R-US_" device="R0805" value="150"/>
-<part name="R7" library="rcl" deviceset="R-US_" device="R0805" value="100"/>
-<part name="R8" library="rcl" deviceset="R-US_" device="R0805" value="150"/>
-<part name="R9" library="rcl" deviceset="R-US_" device="R0805" value="0"/>
-<part name="R10" library="rcl" deviceset="R-US_" device="R0805" value="0"/>
-<part name="R11" library="rcl" deviceset="R-US_" device="R0805" value="0"/>
-<part name="R1" library="rcl" deviceset="R-US_" device="R0805" value="4k"/>
+<part name="R6" library="rcl" deviceset="R-US_" device="R0603" value="150"/>
+<part name="R7" library="rcl" deviceset="R-US_" device="R0603" value="100"/>
+<part name="R8" library="rcl" deviceset="R-US_" device="R0603" value="150"/>
+<part name="R9" library="rcl" deviceset="R-US_" device="R0603" value="0"/>
+<part name="R10" library="rcl" deviceset="R-US_" device="R0603" value="0"/>
+<part name="R11" library="rcl" deviceset="R-US_" device="R0603" value="0"/>
+<part name="R1" library="rcl" deviceset="R-US_" device="R0603" value="4k"/>
 <part name="R2" library="rcl" deviceset="R-US_" device="R0805" value="10k"/>
 </parts>
 <sheets>
