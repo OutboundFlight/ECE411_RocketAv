@@ -2165,8 +2165,8 @@ Please make sure your boards conform to these design rules.</description>
 <element name="C3" library="rcl" package="C0603" value="4.7µ" x="58.706" y="19.739" smashed="yes" rot="R90">
 <attribute name="NAME" x="59.128" y="22.13" size="0.508" layer="25" rot="R180"/>
 </element>
-<element name="C4" library="rcl" package="C0603" value=".22µ" x="55.131" y="22.766" smashed="yes">
-<attribute name="NAME" x="54.75" y="23.655" size="0.508" layer="25"/>
+<element name="C4" library="rcl" package="C0603" value=".22µ" x="56.147" y="22.385" smashed="yes">
+<attribute name="NAME" x="55.766" y="23.274" size="0.508" layer="25"/>
 </element>
 <element name="C5" library="rcl" package="C0603" value="2.2µ" x="48.094" y="19.564" smashed="yes" rot="R90">
 <attribute name="NAME" x="48.508" y="17.868" size="0.508" layer="25" rot="R180"/>
@@ -2329,6 +2329,12 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="TP_SIGNAL_NAME" value="" x="42.545" y="3.429" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R17" library="rcl" package="R0603" value="0" x="35.687" y="18.923" rot="R90"/>
+<element name="TP16" library="testpad" package="TP08R" value="TPTP08R" x="52.959" y="21.717">
+<attribute name="TP_SIGNAL_NAME" value="" x="52.959" y="21.717" size="1.778" layer="27" display="off"/>
+</element>
+<element name="TP17" library="testpad" package="TP08R" value="TPTP08R" x="54.102" y="21.717">
+<attribute name="TP_SIGNAL_NAME" value="" x="54.102" y="21.717" size="1.778" layer="27" display="off"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
@@ -2511,7 +2517,7 @@ Please make sure your boards conform to these design rules.</description>
 <via x="62.865" y="1.27" extent="1-16" drill="0.3302"/>
 <via x="56.642" y="5.207" extent="1-16" drill="0.3302"/>
 <via x="56.515" y="1.27" extent="1-16" drill="0.3302"/>
-<via x="57.912" y="22.352" extent="1-16" drill="0.3302"/>
+<via x="58.547" y="22.479" extent="1-16" drill="0.3302"/>
 <via x="60.198" y="23.876" extent="1-16" drill="0.3302"/>
 <via x="60.452" y="21.463" extent="1-16" drill="0.3302"/>
 <via x="61.849" y="23.114" extent="1-16" drill="0.3302"/>
@@ -2692,22 +2698,18 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="N$10">
 <contactref element="C4" pad="2"/>
 <contactref element="U3" pad="8"/>
-<wire x1="56.083" y1="22.764" x2="55.981" y2="22.766" width="0.3048" layer="1"/>
-<wire x1="55.746" y1="20.639" x2="55.746" y2="21.329" width="0.2794" layer="1"/>
-<wire x1="55.746" y1="21.329" x2="56.134" y2="21.717" width="0.2794" layer="1"/>
-<wire x1="56.134" y1="21.717" x2="56.134" y2="22.713" width="0.2794" layer="1"/>
-<wire x1="56.134" y1="22.713" x2="55.981" y2="22.766" width="0.2794" layer="1"/>
+<wire x1="55.746" y1="20.639" x2="55.746" y2="21.329" width="0.3048" layer="1"/>
+<wire x1="55.746" y1="21.329" x2="55.88" y2="21.463" width="0.3048" layer="1"/>
+<wire x1="55.88" y1="21.463" x2="56.896" y2="21.463" width="0.3048" layer="1"/>
+<wire x1="56.896" y1="21.463" x2="57.023" y2="21.59" width="0.3048" layer="1"/>
+<wire x1="57.023" y1="21.59" x2="57.023" y2="22.359" width="0.3048" layer="1"/>
+<wire x1="57.023" y1="22.359" x2="56.997" y2="22.385" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$11">
 <contactref element="C4" pad="1"/>
 <contactref element="U3" pad="9"/>
-<wire x1="54.198" y1="22.749" x2="54.281" y2="22.766" width="0.3048" layer="1"/>
-<wire x1="55.246" y1="20.639" x2="55.246" y2="21.208" width="0.2794" layer="1"/>
-<wire x1="55.246" y1="21.208" x2="54.864" y2="21.59" width="0.2794" layer="1"/>
-<wire x1="54.864" y1="21.59" x2="54.483" y2="21.59" width="0.2794" layer="1"/>
-<wire x1="54.483" y1="21.59" x2="54.229" y2="21.844" width="0.2794" layer="1"/>
-<wire x1="54.229" y1="21.844" x2="54.229" y2="22.718" width="0.2794" layer="1"/>
-<wire x1="54.229" y1="22.718" x2="54.281" y2="22.766" width="0.2794" layer="1"/>
+<wire x1="55.246" y1="20.639" x2="55.246" y2="22.334" width="0.3048" layer="1"/>
+<wire x1="55.246" y1="22.334" x2="55.297" y2="22.385" width="0.3048" layer="1"/>
 </signal>
 <signal name="VCC">
 <contactref element="C9" pad="1"/>
@@ -3500,6 +3502,19 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="37.656" y1="19.367" x2="37.211" y2="19.812" width="0.4064" layer="1"/>
 <wire x1="37.211" y1="19.812" x2="35.726" y2="19.812" width="0.4064" layer="1"/>
 <wire x1="35.726" y1="19.812" x2="35.687" y2="19.773" width="0.4064" layer="1"/>
+</signal>
+<signal name="N$66">
+<contactref element="U3" pad="10"/>
+<contactref element="TP17" pad="TP"/>
+<wire x1="54.746" y1="20.639" x2="54.746" y2="21.073" width="0.3048" layer="1"/>
+<wire x1="54.746" y1="21.073" x2="54.102" y2="21.717" width="0.3048" layer="1"/>
+</signal>
+<signal name="N$67">
+<contactref element="TP16" pad="TP"/>
+<contactref element="U3" pad="12"/>
+<wire x1="53.746" y1="20.639" x2="53.721" y2="20.639" width="0.3048" layer="1"/>
+<wire x1="53.721" y1="20.639" x2="53.721" y2="20.955" width="0.3048" layer="1"/>
+<wire x1="53.721" y1="20.955" x2="52.959" y2="21.717" width="0.3048" layer="1"/>
 </signal>
 </signals>
 <errors>

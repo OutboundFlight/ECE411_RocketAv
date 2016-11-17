@@ -10369,6 +10369,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="TP14" library="testpad" deviceset="TP" device="TP08R"/>
 <part name="TP15" library="testpad" deviceset="TP" device="TP08R"/>
 <part name="R17" library="rcl" deviceset="R-US_" device="R0603" value="0"/>
+<part name="TP16" library="testpad" deviceset="TP" device="TP08R"/>
+<part name="TP17" library="testpad" deviceset="TP" device="TP08R"/>
 </parts>
 <sheets>
 <sheet>
@@ -10622,6 +10624,14 @@ Gyroscope</text>
 <attribute name="TP_SIGNAL_NAME" x="158.75" y="247.65" size="1.778" layer="97" rot="R270"/>
 </instance>
 <instance part="R17" gate="G$1" x="182.88" y="157.48" rot="R180"/>
+<instance part="TP16" gate="G$1" x="332.74" y="162.56" smashed="yes" rot="R270">
+<attribute name="NAME" x="334.01" y="161.29" size="1.778" layer="95"/>
+<attribute name="TP_SIGNAL_NAME" x="331.47" y="161.29" size="1.778" layer="97" rot="R270"/>
+</instance>
+<instance part="TP17" gate="G$1" x="332.74" y="157.48" smashed="yes" rot="R270">
+<attribute name="NAME" x="334.01" y="156.21" size="1.778" layer="95"/>
+<attribute name="TP_SIGNAL_NAME" x="331.47" y="156.21" size="1.778" layer="97" rot="R270"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -11492,6 +11502,20 @@ Gyroscope</text>
 <pinref part="R17" gate="G$1" pin="2"/>
 <pinref part="U6" gate="G$1" pin="PE2(!HWB)"/>
 <wire x1="175.26" y1="157.48" x2="177.8" y2="157.48" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$66" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="DEN(G)"/>
+<pinref part="TP17" gate="G$1" pin="TP"/>
+<wire x1="327.66" y1="157.48" x2="330.2" y2="157.48" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$67" class="0">
+<segment>
+<pinref part="TP16" gate="G$1" pin="TP"/>
+<pinref part="U3" gate="G$1" pin="DRDY(G)"/>
+<wire x1="330.2" y1="162.56" x2="327.66" y2="162.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
