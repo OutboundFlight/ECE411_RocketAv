@@ -10375,7 +10375,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <sheets>
 <sheet>
 <plain>
-<text x="419.1" y="7.366" size="2.54" layer="97">A</text>
 <text x="360.68" y="10.16" size="2.54" layer="97">00000001</text>
 <text x="330.2" y="25.4" size="2.54" layer="97">Model Rocket Avionics, Team 8
 Schematic Diagram</text>
@@ -10390,7 +10389,7 @@ Schematic Diagram</text>
 <wire x1="259.08" y1="198.12" x2="358.14" y2="198.12" width="0.1524" layer="97"/>
 <text x="261.62" y="195.58" size="1.778" layer="97">Sensors</text>
 <text x="261.62" y="236.22" size="1.778" layer="97">Flash Memory</text>
-<text x="403.86" y="45.72" size="2.54" layer="97" rot="R180">All capacitors 16 V rating, ceramic
+<text x="411.48" y="45.72" size="2.54" layer="97" rot="R180">All capacitors 16 V rating, ceramic
 All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <text x="91.44" y="210.82" size="1.778" layer="97" rot="R90">Battery Connector</text>
 <wire x1="17.78" y1="264.16" x2="17.78" y2="198.12" width="0.1524" layer="97"/>
@@ -10399,18 +10398,6 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <wire x1="259.08" y1="91.44" x2="96.52" y2="91.44" width="0.1524" layer="97"/>
 <wire x1="96.52" y1="91.44" x2="96.52" y2="198.12" width="0.1524" layer="97"/>
 <wire x1="96.52" y1="198.12" x2="259.08" y2="198.12" width="0.1524" layer="97"/>
-<text x="27.94" y="33.02" size="1.778" layer="97">- Add Value to VCC   **DONE
-- Change Team Name    **DONE
-- Small bypass caps on power suppliesVCC, AVCC, etc (close to pins)  **DONE
-- Maybe look into hooking up interrupt lines ***DONE
-- Bypass cap on flash memory  **DONE
-- Add test points ***Ask Andrew: Pads or 0ohm resistors?**Done
-- Check VBUS**DONE
-- 11-05-2016</text>
-<text x="35.56" y="66.04" size="1.778" layer="97">Add user power switch - DONE
-Add comparator for enable line - DONE
-Add second LDO for sensor - CANCELED</text>
-<text x="27.94" y="27.94" size="1.778" layer="97">NEEDS RGB LED ON GPIO BECAUSE OF REASONS **DONE</text>
 <text x="134.62" y="259.08" size="1.778" layer="97">Low-dropout 3.3V LDO</text>
 <text x="137.668" y="206.756" size="1.778" layer="97">Voltage comparator</text>
 <text x="53.34" y="231.14" size="1.778" layer="97">LiPo charger</text>
@@ -10419,11 +10406,6 @@ Add second LDO for sensor - CANCELED</text>
 <text x="300.482" y="146.558" size="1.778" layer="97">6-DOF Accelerometer/
 Gyroscope</text>
 <text x="208.28" y="162.56" size="1.778" layer="97">RGB LED</text>
-<text x="38.1" y="134.62" size="1.778" layer="97">Understand Data Ready and Data Enable pins</text>
-<text x="38.1" y="142.24" size="1.778" layer="97">UCAP/UGND - why would they be different</text>
-<text x="38.1" y="137.16" size="1.778" layer="97">22 ohm resistors on the D-/D+ lines *** DONE</text>
-<text x="38.1" y="144.78" size="1.778" layer="97">Add LEDs to Stat1/Stat2</text>
-<text x="38.1" y="139.7" size="1.778" layer="97">Add 6-pin pin header (unless there's a bootloader solution)</text>
 <text x="302.26" y="231.902" size="1.778" layer="97">U2</text>
 <text x="138.938" y="255.778" size="1.778" layer="97">U1</text>
 </plain>
