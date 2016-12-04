@@ -142,173 +142,6 @@
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
 <libraries>
-<library name="texas">
-<description>&lt;b&gt;Texas Instruments Devices&lt;/b&gt;&lt;p&gt;
- &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="DRC-S-PVSON-N10">
-<description>&lt;b&gt;DRK (S-PDSO-N10)&lt;/b&gt;&lt;p&gt;
-Source: www.ti.com .. bq27010.pdf&lt;br&gt;
-changed 2011-11-09</description>
-<wire x1="-1.475" y1="1.475" x2="1.475" y2="1.475" width="0.2032" layer="51"/>
-<wire x1="1.475" y1="1.475" x2="1.475" y2="-1.475" width="0.2032" layer="51"/>
-<wire x1="1.475" y1="-1.475" x2="-1.475" y2="-1.475" width="0.2032" layer="51"/>
-<wire x1="-1.475" y1="-1.475" x2="-1.475" y2="1.475" width="0.2032" layer="51"/>
-<wire x1="-1.475" y1="0.7475" x2="-1.475" y2="1.475" width="0.2032" layer="21"/>
-<wire x1="1.475" y1="-0.7475" x2="1.475" y2="-1.475" width="0.2032" layer="21"/>
-<wire x1="-1.475" y1="-1.475" x2="-1.475" y2="-0.7475" width="0.2032" layer="21"/>
-<wire x1="1.475" y1="1.475" x2="1.475" y2="0.7475" width="0.2032" layer="21"/>
-<circle x="-1" y="-1.165" radius="0.1752" width="0" layer="29"/>
-<circle x="-1" y="-1.165" radius="0.115" width="0" layer="31"/>
-<circle x="-0.5" y="-1.165" radius="0.115" width="0" layer="31"/>
-<circle x="0" y="-1.165" radius="0.115" width="0" layer="31"/>
-<circle x="0.5" y="-1.165" radius="0.115" width="0" layer="31"/>
-<circle x="1" y="-1.165" radius="0.115" width="0" layer="31"/>
-<circle x="1" y="1.165" radius="0.115" width="0" layer="31"/>
-<circle x="0.5" y="1.165" radius="0.115" width="0" layer="31"/>
-<circle x="0" y="1.165" radius="0.115" width="0" layer="31"/>
-<circle x="-0.5" y="1.165" radius="0.115" width="0" layer="31"/>
-<circle x="-1" y="1.165" radius="0.115" width="0" layer="31"/>
-<circle x="-0.5" y="-1.165" radius="0.1752" width="0" layer="29"/>
-<circle x="0" y="-1.165" radius="0.1752" width="0" layer="29"/>
-<circle x="0.5" y="-1.165" radius="0.1752" width="0" layer="29"/>
-<circle x="1" y="-1.165" radius="0.1752" width="0" layer="29"/>
-<circle x="1" y="1.165" radius="0.1752" width="0" layer="29"/>
-<circle x="0.5" y="1.165" radius="0.1752" width="0" layer="29"/>
-<circle x="0" y="1.165" radius="0.1752" width="0" layer="29"/>
-<circle x="-0.5" y="1.165" radius="0.1752" width="0" layer="29"/>
-<circle x="-1" y="1.165" radius="0.1752" width="0" layer="29"/>
-<smd name="TH" x="0" y="0" dx="2.4" dy="1.65" layer="1" stop="no" cream="no"/>
-<smd name="1" x="-1" y="-1.475" dx="0.85" dy="0.28" layer="1" roundness="50" rot="R90" stop="no" cream="no"/>
-<smd name="2" x="-0.5" y="-1.475" dx="0.85" dy="0.28" layer="1" roundness="50" rot="R90" stop="no" cream="no"/>
-<smd name="3" x="0" y="-1.475" dx="0.85" dy="0.28" layer="1" roundness="50" rot="R90" stop="no" cream="no"/>
-<smd name="4" x="0.5" y="-1.475" dx="0.85" dy="0.28" layer="1" roundness="50" rot="R90" stop="no" cream="no"/>
-<smd name="5" x="1" y="-1.475" dx="0.85" dy="0.28" layer="1" roundness="50" rot="R90" stop="no" cream="no"/>
-<smd name="6" x="1" y="1.475" dx="0.85" dy="0.28" layer="1" roundness="50" rot="R270" stop="no" cream="no"/>
-<smd name="7" x="0.5" y="1.475" dx="0.85" dy="0.28" layer="1" roundness="50" rot="R270" stop="no" cream="no"/>
-<smd name="8" x="0" y="1.475" dx="0.85" dy="0.28" layer="1" roundness="50" rot="R270" stop="no" cream="no"/>
-<smd name="9" x="-0.5" y="1.475" dx="0.85" dy="0.28" layer="1" roundness="50" rot="R270" stop="no" cream="no"/>
-<smd name="10" x="-1" y="1.475" dx="0.85" dy="0.28" layer="1" roundness="50" rot="R270" stop="no" cream="no"/>
-<text x="-2.5" y="2" size="1.27" layer="25">&gt;NAME</text>
-<text x="-2.5" y="-3.5" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-1.925" y1="0.125" x2="-1.325" y2="0.425" layer="29"/>
-<rectangle x1="-1.925" y1="-0.425" x2="-1.325" y2="-0.125" layer="29"/>
-<rectangle x1="-1.225" y1="-0.85" x2="1.225" y2="0.85" layer="29"/>
-<rectangle x1="-1.9" y1="0.15" x2="-1.325" y2="0.4" layer="31"/>
-<rectangle x1="-1.9" y1="-0.4" x2="-1.325" y2="-0.15" layer="31"/>
-<rectangle x1="-1.175" y1="0.15" x2="-0.15" y2="0.8" layer="31"/>
-<rectangle x1="-1.175" y1="-0.8" x2="-0.15" y2="-0.15" layer="31"/>
-<rectangle x1="0.15" y1="-0.8" x2="1.175" y2="-0.15" layer="31" rot="R180"/>
-<rectangle x1="0.15" y1="0.15" x2="1.175" y2="0.8" layer="31" rot="R180"/>
-<rectangle x1="-1.575" y1="-1.575" x2="0" y2="0" layer="51"/>
-<rectangle x1="-1.175" y1="-1.925" x2="-0.825" y2="-1.165" layer="29"/>
-<rectangle x1="-1.3425" y1="-1.6225" x2="-0.6575" y2="-1.3925" layer="31" rot="R90"/>
-<rectangle x1="-0.8425" y1="-1.6225" x2="-0.1575" y2="-1.3925" layer="31" rot="R90"/>
-<rectangle x1="-0.3425" y1="-1.6225" x2="0.3425" y2="-1.3925" layer="31" rot="R90"/>
-<rectangle x1="0.1575" y1="-1.6225" x2="0.8425" y2="-1.3925" layer="31" rot="R90"/>
-<rectangle x1="0.6575" y1="-1.6225" x2="1.3425" y2="-1.3925" layer="31" rot="R90"/>
-<rectangle x1="0.6575" y1="1.3925" x2="1.3425" y2="1.6225" layer="31" rot="R270"/>
-<rectangle x1="0.1575" y1="1.3925" x2="0.8425" y2="1.6225" layer="31" rot="R270"/>
-<rectangle x1="-0.3425" y1="1.3925" x2="0.3425" y2="1.6225" layer="31" rot="R270"/>
-<rectangle x1="-0.8425" y1="1.3925" x2="-0.1575" y2="1.6225" layer="31" rot="R270"/>
-<rectangle x1="-1.3425" y1="1.3925" x2="-0.6575" y2="1.6225" layer="31" rot="R270"/>
-<rectangle x1="-0.675" y1="-1.925" x2="-0.325" y2="-1.165" layer="29"/>
-<rectangle x1="-0.175" y1="-1.925" x2="0.175" y2="-1.165" layer="29"/>
-<rectangle x1="0.325" y1="-1.925" x2="0.675" y2="-1.165" layer="29"/>
-<rectangle x1="0.825" y1="-1.925" x2="1.175" y2="-1.165" layer="29"/>
-<rectangle x1="0.825" y1="1.165" x2="1.175" y2="1.925" layer="29" rot="R180"/>
-<rectangle x1="0.325" y1="1.165" x2="0.675" y2="1.925" layer="29" rot="R180"/>
-<rectangle x1="-0.175" y1="1.165" x2="0.175" y2="1.925" layer="29" rot="R180"/>
-<rectangle x1="-0.675" y1="1.165" x2="-0.325" y2="1.925" layer="29" rot="R180"/>
-<rectangle x1="-1.175" y1="1.165" x2="-0.825" y2="1.925" layer="29" rot="R180"/>
-<rectangle x1="1.325" y1="-0.425" x2="1.925" y2="-0.125" layer="29" rot="R180"/>
-<rectangle x1="1.325" y1="0.125" x2="1.925" y2="0.425" layer="29" rot="R180"/>
-<rectangle x1="1.325" y1="-0.4" x2="1.9" y2="-0.15" layer="31" rot="R180"/>
-<rectangle x1="1.325" y1="0.15" x2="1.9" y2="0.4" layer="31" rot="R180"/>
-<polygon width="0.1" layer="1">
-<vertex x="-1.85" y="0.35"/>
-<vertex x="-1.85" y="0.3625"/>
-<vertex x="-1.15" y="0.3625"/>
-<vertex x="-1.15" y="0.775"/>
-<vertex x="1.15" y="0.775"/>
-<vertex x="1.15" y="0.375"/>
-<vertex x="1.15" y="0.3625"/>
-<vertex x="1.85" y="0.3625"/>
-<vertex x="1.85" y="0.1875"/>
-<vertex x="1.15" y="0.1875"/>
-<vertex x="1.15" y="-0.175"/>
-<vertex x="1.15" y="-0.1875"/>
-<vertex x="1.85" y="-0.1875"/>
-<vertex x="1.85" y="-0.3625"/>
-<vertex x="1.15" y="-0.3625"/>
-<vertex x="1.15" y="-0.775"/>
-<vertex x="-1.15" y="-0.775"/>
-<vertex x="-1.15" y="-0.3625"/>
-<vertex x="-1.85" y="-0.3625"/>
-<vertex x="-1.85" y="-0.1875"/>
-<vertex x="-1.15" y="-0.1875"/>
-<vertex x="-1.15" y="0.175"/>
-<vertex x="-1.15" y="0.1875"/>
-<vertex x="-1.85" y="0.1875"/>
-<vertex x="-1.85" y="0.3375"/>
-</polygon>
-</package>
-</packages>
-<symbols>
-<symbol name="BQ24022">
-<pin name="AC" x="-12.7" y="5.08" length="short" direction="in"/>
-<pin name="USB" x="-12.7" y="0" length="short"/>
-<pin name="STAT1" x="-12.7" y="-2.54" length="short"/>
-<pin name="STAT2" x="-12.7" y="-5.08" length="short"/>
-<pin name="VSS" x="-12.7" y="-7.62" length="short" direction="pwr"/>
-<pin name="ISET1" x="12.7" y="-7.62" length="short" direction="in" rot="R180"/>
-<pin name="ISET2" x="12.7" y="-5.08" length="short" direction="in" rot="R180"/>
-<pin name="1CE" x="12.7" y="-2.54" length="short" direction="in" rot="R180"/>
-<pin name="TS" x="12.7" y="0" length="short" direction="in" rot="R180"/>
-<pin name="OUT" x="12.7" y="5.08" length="short" direction="out" rot="R180"/>
-<wire x1="-10.16" y1="7.62" x2="10.16" y2="7.62" width="0.4064" layer="94"/>
-<wire x1="10.16" y1="7.62" x2="10.16" y2="-10.16" width="0.4064" layer="94"/>
-<wire x1="10.16" y1="-10.16" x2="-10.16" y2="-10.16" width="0.4064" layer="94"/>
-<wire x1="-10.16" y1="-10.16" x2="-10.16" y2="7.62" width="0.4064" layer="94"/>
-<text x="-10.16" y="8.89" size="1.778" layer="95">&gt;NAME</text>
-<text x="-10.16" y="-12.7" size="1.778" layer="96">&gt;VALUE</text>
-</symbol>
-<symbol name="THERMAL">
-<text x="0" y="1.27" size="1.778" layer="95">&gt;NAME</text>
-<pin name="TH" x="-2.54" y="0" visible="pin" length="short" direction="pas"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="BQ24022" prefix="IC">
-<description>&lt;b&gt;SINGLE-CHIP, LI-ION AND LI-POL CHARGER IC&lt;/b&gt; WITH AUTONOMOUS USB-PORT AND AC-ADAPTER SUPPLY MANAGEMENT (bqTINY™-II)&lt;p&gt;
-Source: bq24022.pdf (www.ti.com)</description>
-<gates>
-<gate name="G$1" symbol="BQ24022" x="0" y="0"/>
-<gate name="TH" symbol="THERMAL" x="22.86" y="-10.16" addlevel="request"/>
-</gates>
-<devices>
-<device name="" package="DRC-S-PVSON-N10">
-<connects>
-<connect gate="G$1" pin="1CE" pad="8"/>
-<connect gate="G$1" pin="AC" pad="1"/>
-<connect gate="G$1" pin="ISET1" pad="6"/>
-<connect gate="G$1" pin="ISET2" pad="7"/>
-<connect gate="G$1" pin="OUT" pad="10"/>
-<connect gate="G$1" pin="STAT1" pad="3"/>
-<connect gate="G$1" pin="STAT2" pad="4"/>
-<connect gate="G$1" pin="TS" pad="9"/>
-<connect gate="G$1" pin="USB" pad="2"/>
-<connect gate="G$1" pin="VSS" pad="5"/>
-<connect gate="TH" pin="TH" pad="TH"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="supply2">
 <description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
 GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
@@ -8450,6 +8283,88 @@ Source: http://cds.linear.com/docs/Datasheet/623012fb.pdf</description>
 <rectangle x1="-0.225" y1="0.8" x2="0.225" y2="1.4" layer="51"/>
 <rectangle x1="-1.175" y1="0.8" x2="-0.725" y2="1.4" layer="51"/>
 </package>
+<package name="DRC-S-PVSON-N10">
+<description>&lt;b&gt;DRK (S-PDSO-N10)&lt;/b&gt;&lt;p&gt;
+Source: www.ti.com .. bq27010.pdf&lt;br&gt;
+changed 2011-11-09</description>
+<wire x1="-1.475" y1="1.475" x2="1.475" y2="1.475" width="0.2032" layer="51"/>
+<wire x1="1.475" y1="1.475" x2="1.475" y2="-1.475" width="0.2032" layer="51"/>
+<wire x1="1.475" y1="-1.475" x2="-1.475" y2="-1.475" width="0.2032" layer="51"/>
+<wire x1="-1.475" y1="-1.475" x2="-1.475" y2="1.475" width="0.2032" layer="51"/>
+<wire x1="-1.475" y1="0.7475" x2="-1.475" y2="1.475" width="0.2032" layer="21"/>
+<wire x1="1.475" y1="-0.7475" x2="1.475" y2="-1.475" width="0.2032" layer="21"/>
+<wire x1="-1.475" y1="-1.475" x2="-1.475" y2="-0.7475" width="0.2032" layer="21"/>
+<wire x1="1.475" y1="1.475" x2="1.475" y2="0.7475" width="0.2032" layer="21"/>
+<circle x="-1" y="-1.165" radius="0.1752" width="0" layer="29"/>
+<circle x="-0.5" y="-1.165" radius="0.1752" width="0" layer="29"/>
+<circle x="0" y="-1.165" radius="0.1752" width="0" layer="29"/>
+<circle x="0.5" y="-1.165" radius="0.1752" width="0" layer="29"/>
+<circle x="1" y="-1.165" radius="0.1752" width="0" layer="29"/>
+<circle x="1" y="1.165" radius="0.1752" width="0" layer="29"/>
+<circle x="0.5" y="1.165" radius="0.1752" width="0" layer="29"/>
+<circle x="0" y="1.165" radius="0.1752" width="0" layer="29"/>
+<circle x="-0.5" y="1.165" radius="0.1752" width="0" layer="29"/>
+<circle x="-1" y="1.165" radius="0.1752" width="0" layer="29"/>
+<smd name="TH" x="0" y="0" dx="2.4" dy="1.65" layer="1" stop="no"/>
+<smd name="1" x="-1" y="-1.475" dx="0.85" dy="0.28" layer="1" rot="R90" stop="no"/>
+<smd name="2" x="-0.5" y="-1.475" dx="0.85" dy="0.28" layer="1" rot="R90" stop="no"/>
+<smd name="3" x="0" y="-1.475" dx="0.85" dy="0.28" layer="1" rot="R90" stop="no"/>
+<smd name="4" x="0.5" y="-1.475" dx="0.85" dy="0.28" layer="1" rot="R90" stop="no"/>
+<smd name="5" x="1" y="-1.475" dx="0.85" dy="0.28" layer="1" rot="R90" stop="no"/>
+<smd name="6" x="1" y="1.475" dx="0.85" dy="0.28" layer="1" rot="R270" stop="no"/>
+<smd name="7" x="0.5" y="1.475" dx="0.85" dy="0.28" layer="1" rot="R270" stop="no"/>
+<smd name="8" x="0" y="1.475" dx="0.85" dy="0.28" layer="1" rot="R270" stop="no"/>
+<smd name="9" x="-0.5" y="1.475" dx="0.85" dy="0.28" layer="1" rot="R270" stop="no"/>
+<smd name="10" x="-1" y="1.475" dx="0.85" dy="0.28" layer="1" rot="R270" stop="no"/>
+<text x="-2.5" y="2" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.5" y="-3.5" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.925" y1="0.125" x2="-1.325" y2="0.425" layer="29"/>
+<rectangle x1="-1.925" y1="-0.425" x2="-1.325" y2="-0.125" layer="29"/>
+<rectangle x1="-1.225" y1="-0.85" x2="1.225" y2="0.85" layer="29"/>
+<rectangle x1="-1.9" y1="0.15" x2="-1.325" y2="0.4" layer="31"/>
+<rectangle x1="-1.9" y1="-0.4" x2="-1.325" y2="-0.15" layer="31"/>
+<rectangle x1="-1.575" y1="-1.575" x2="0" y2="0" layer="51"/>
+<rectangle x1="-1.175" y1="-1.925" x2="-0.825" y2="-1.165" layer="29"/>
+<rectangle x1="-0.675" y1="-1.925" x2="-0.325" y2="-1.165" layer="29"/>
+<rectangle x1="-0.175" y1="-1.925" x2="0.175" y2="-1.165" layer="29"/>
+<rectangle x1="0.325" y1="-1.925" x2="0.675" y2="-1.165" layer="29"/>
+<rectangle x1="0.825" y1="-1.925" x2="1.175" y2="-1.165" layer="29"/>
+<rectangle x1="0.825" y1="1.165" x2="1.175" y2="1.925" layer="29" rot="R180"/>
+<rectangle x1="0.325" y1="1.165" x2="0.675" y2="1.925" layer="29" rot="R180"/>
+<rectangle x1="-0.175" y1="1.165" x2="0.175" y2="1.925" layer="29" rot="R180"/>
+<rectangle x1="-0.675" y1="1.165" x2="-0.325" y2="1.925" layer="29" rot="R180"/>
+<rectangle x1="-1.175" y1="1.165" x2="-0.825" y2="1.925" layer="29" rot="R180"/>
+<rectangle x1="1.325" y1="-0.425" x2="1.925" y2="-0.125" layer="29" rot="R180"/>
+<rectangle x1="1.325" y1="0.125" x2="1.925" y2="0.425" layer="29" rot="R180"/>
+<rectangle x1="1.325" y1="-0.4" x2="1.9" y2="-0.15" layer="31" rot="R180"/>
+<rectangle x1="1.325" y1="0.15" x2="1.9" y2="0.4" layer="31" rot="R180"/>
+<polygon width="0.1" layer="1">
+<vertex x="-1.85" y="0.35"/>
+<vertex x="-1.85" y="0.3625"/>
+<vertex x="-1.15" y="0.3625"/>
+<vertex x="-1.15" y="0.775"/>
+<vertex x="1.15" y="0.775"/>
+<vertex x="1.15" y="0.375"/>
+<vertex x="1.15" y="0.3625"/>
+<vertex x="1.85" y="0.3625"/>
+<vertex x="1.85" y="0.1875"/>
+<vertex x="1.15" y="0.1875"/>
+<vertex x="1.15" y="-0.175"/>
+<vertex x="1.15" y="-0.1875"/>
+<vertex x="1.85" y="-0.1875"/>
+<vertex x="1.85" y="-0.3625"/>
+<vertex x="1.15" y="-0.3625"/>
+<vertex x="1.15" y="-0.775"/>
+<vertex x="-1.15" y="-0.775"/>
+<vertex x="-1.15" y="-0.3625"/>
+<vertex x="-1.85" y="-0.3625"/>
+<vertex x="-1.85" y="-0.1875"/>
+<vertex x="-1.15" y="-0.1875"/>
+<vertex x="-1.15" y="0.175"/>
+<vertex x="-1.15" y="0.1875"/>
+<vertex x="-1.85" y="0.1875"/>
+</polygon>
+</package>
 </packages>
 <symbols>
 <symbol name="SPDT">
@@ -8487,6 +8402,28 @@ Source: http://cds.linear.com/docs/Datasheet/623012fb.pdf</description>
 <text x="-7.112" y="10.922" size="1.27" layer="95">&gt;NAME</text>
 <text x="-7.112" y="-12.192" size="1.27" layer="96">&gt;VALUE</text>
 </symbol>
+<symbol name="BQ24022">
+<pin name="AC" x="-12.7" y="5.08" length="short" direction="in"/>
+<pin name="USB" x="-12.7" y="0" length="short"/>
+<pin name="STAT1" x="-12.7" y="-2.54" length="short"/>
+<pin name="STAT2" x="-12.7" y="-5.08" length="short"/>
+<pin name="VSS" x="-12.7" y="-7.62" length="short" direction="pwr"/>
+<pin name="ISET1" x="12.7" y="-7.62" length="short" direction="in" rot="R180"/>
+<pin name="ISET2" x="12.7" y="-5.08" length="short" direction="in" rot="R180"/>
+<pin name="/PG" x="12.7" y="-2.54" length="short" direction="out" rot="R180"/>
+<pin name="/CE" x="12.7" y="0" length="short" direction="in" rot="R180"/>
+<pin name="OUT" x="12.7" y="5.08" length="short" direction="out" rot="R180"/>
+<wire x1="-10.16" y1="7.62" x2="10.16" y2="7.62" width="0.4064" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="10.16" y2="-10.16" width="0.4064" layer="94"/>
+<wire x1="10.16" y1="-10.16" x2="-10.16" y2="-10.16" width="0.4064" layer="94"/>
+<wire x1="-10.16" y1="-10.16" x2="-10.16" y2="7.62" width="0.4064" layer="94"/>
+<text x="-10.16" y="8.89" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="-12.7" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="THERMAL">
+<text x="0" y="1.27" size="1.778" layer="95">&gt;NAME</text>
+<pin name="TH" x="-2.54" y="0" visible="pin" length="short" direction="pas"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="COM-00102">
@@ -8520,6 +8457,34 @@ Source: http://cds.linear.com/docs/Datasheet/623012fb.pdf</description>
 <connect gate="&gt;NAME" pin="VHYST" pad="4"/>
 <connect gate="&gt;NAME" pin="VLOGIC" pad="5"/>
 <connect gate="&gt;NAME" pin="VTH" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BQ24022" prefix="IC">
+<description>&lt;b&gt;SINGLE-CHIP, LI-ION AND LI-POL CHARGER IC&lt;/b&gt; WITH AUTONOMOUS USB-PORT AND AC-ADAPTER SUPPLY MANAGEMENT (bqTINY™-II)&lt;p&gt;
+Source: bq24022.pdf (www.ti.com)</description>
+<gates>
+<gate name="G$1" symbol="BQ24022" x="0" y="0"/>
+<gate name="TH" symbol="THERMAL" x="22.86" y="-10.16" addlevel="request"/>
+</gates>
+<devices>
+<device name="" package="DRC-S-PVSON-N10">
+<connects>
+<connect gate="G$1" pin="/CE" pad="9"/>
+<connect gate="G$1" pin="/PG" pad="8"/>
+<connect gate="G$1" pin="AC" pad="1"/>
+<connect gate="G$1" pin="ISET1" pad="6"/>
+<connect gate="G$1" pin="ISET2" pad="7"/>
+<connect gate="G$1" pin="OUT" pad="10"/>
+<connect gate="G$1" pin="STAT1" pad="3"/>
+<connect gate="G$1" pin="STAT2" pad="4"/>
+<connect gate="G$1" pin="USB" pad="2"/>
+<connect gate="G$1" pin="VSS" pad="5"/>
+<connect gate="TH" pin="TH" pad="TH"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -10255,7 +10220,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </class>
 </classes>
 <parts>
-<part name="IC1" library="texas" deviceset="BQ24022" device=""/>
+<part name="IC1" library="tinyav-lib" deviceset="BQ24022" device=""/>
 <part name="C1" library="rcl" deviceset="C-EU" device="C0603" value="1µ"/>
 <part name="C2" library="rcl" deviceset="C-EU" device="C0805" value="1µ"/>
 <part name="SUPPLY3" library="supply2" deviceset="GND" device=""/>
@@ -10371,6 +10336,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="R17" library="rcl" deviceset="R-US_" device="R0603" value="0"/>
 <part name="TP16" library="testpad" deviceset="TP" device="TP08R"/>
 <part name="TP17" library="testpad" deviceset="TP" device="TP08R"/>
+<part name="TP18" library="testpad" deviceset="TP" device="TP08R"/>
 </parts>
 <sheets>
 <sheet>
@@ -10619,6 +10585,10 @@ Gyroscope</text>
 <attribute name="NAME" x="334.01" y="156.21" size="1.778" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="331.47" y="156.21" size="1.778" layer="97" rot="R270"/>
 </instance>
+<instance part="TP18" gate="G$1" x="81.28" y="243.84" smashed="yes" rot="R270">
+<attribute name="NAME" x="82.042" y="243.84" size="1.778" layer="95"/>
+<attribute name="TP_SIGNAL_NAME" x="80.01" y="242.57" size="1.778" layer="97" rot="R270"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -10641,14 +10611,10 @@ Gyroscope</text>
 </segment>
 <segment>
 <pinref part="SUPPLY1" gate="GND" pin="GND"/>
-<pinref part="IC1" gate="G$1" pin="1CE"/>
-<wire x1="76.2" y1="243.84" x2="83.82" y2="243.84" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="243.84" x2="83.82" y2="241.3" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="TS"/>
+<pinref part="IC1" gate="G$1" pin="/CE"/>
 <wire x1="83.82" y1="241.3" x2="83.82" y2="238.76" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="246.38" x2="83.82" y2="246.38" width="0.1524" layer="91"/>
-<wire x1="83.82" y1="246.38" x2="83.82" y2="243.84" width="0.1524" layer="91"/>
-<junction x="83.82" y="243.84"/>
+<wire x1="83.82" y1="246.38" x2="83.82" y2="241.3" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="ISET2"/>
 <wire x1="76.2" y1="241.3" x2="83.82" y2="241.3" width="0.1524" layer="91"/>
 <junction x="83.82" y="241.3"/>
@@ -11503,6 +11469,13 @@ Gyroscope</text>
 <pinref part="TP16" gate="G$1" pin="TP"/>
 <pinref part="U3" gate="G$1" pin="DRDY(G)"/>
 <wire x1="330.2" y1="162.56" x2="327.66" y2="162.56" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$68" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="/PG"/>
+<pinref part="TP18" gate="G$1" pin="TP"/>
+<wire x1="76.2" y1="243.84" x2="78.74" y2="243.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
