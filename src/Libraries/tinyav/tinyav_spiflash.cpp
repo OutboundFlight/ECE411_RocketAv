@@ -1,9 +1,9 @@
 #include <tinyav_spiflash.h>
 #define PAGE_TO_ADDRESS(a) (a << 8)
 #define ADDRESS_TO_PAGE(a) (a >> 8)
-#define ADDRESS_BYTE0(a) ((a & 0x110000) >> 16)
-#define ADDRESS_BYTE1(a) ((a & 0x001100) >> 8)
-#define ADDRESS_BYTE2(a) (a & 0x000011)
+#define ADDRESS_BYTE0(a) ((a & 0xff0000) >> 16)
+#define ADDRESS_BYTE1(a) ((a & 0x00ff00) >> 8)
+#define ADDRESS_BYTE2(a) (a & 0x0000ff)
 
 //Pass a single-byte command to the device
 void spiflash::bytecommand(uint8_t code)
