@@ -64,6 +64,9 @@ class spiflash
 		void readBytes(long address, uint8_t *data, int numbytes);
 		void init(int cs);
 		int writeSequentialPage(uint8_t *data, int numbytes);
+		int nextWrittenPage(int readhead);
+		void readPage(int page, uint8_t *data);
+		void bytecommand(uint8_t code);
 		
 	protected:
 		uint8_t head;               //pointer to current memory location

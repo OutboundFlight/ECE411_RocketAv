@@ -13,7 +13,7 @@
 // Hardware SPI setup for sensor
 Adafruit_LSM9DS0 lsm = Adafruit_LSM9DS0(XM_EN, GYR_EN);
 
-struct sensor_sample {
+typedef struct sensor_sample {
   long timestamp;
   int xm_x;
   int xm_y;
@@ -25,18 +25,16 @@ struct sensor_sample {
   int mag_y;
   int mag_z;
   int temp;
-  char line = 0xA;
-};
+  char line;
+}sensor_sample;
 
-samples_per_page = PAGE_SIZE/size(sensor_sample);
+int samples_per_page = PAGE_SIZE/sizeof(sensor_sample);
 
-union page 
+union page
 {
-  sensor_sample entries[samples_per_page];
+  sensor_sample entries[12];
   uint8_t bytes [PAGE_SIZE];
-};
-  
-sensor_union bufferData[11];
+} pdata;
 
 void setupSensor()
 {
@@ -58,31 +56,33 @@ void setupSensor()
   //lsm.setupGyro(lsm.LSM9DS0_GYROSCALE_500DPS);
   lsm.setupGyro(lsm.LSM9DS0_GYROSCALE_2000DPS);
 }
+ spiflash flash;
 
-
+int sample_number;
+  char mode;
+int current_page;
 
 void setup() 
 {
   Serial.begin(BAUD);
   Serial.println("~~RocketAV software version 1.0~~");
-  spiflash flash;
   flash.init(MEM_EN);
   setupSensor();
   Serial.print("Please select: [i]dle mode, [l]aunch mode, [d]ownload data, [e]rase memory? ");
   if (!lsm.begin()) {
     Serial.println("Oops ... unable to initialize the LSM9DS0. Check your wiring!");
   }
-
+  sample_number = 0;
+  mode = 'i';
 }
 
 void loop() 
 {
 // Wait for USB port communication
 
-  char mode = 'i';
-  page pdata;
-  int sample_number = 0;
-  
+  char input;
+  int nextpage;
+  if(Serial1)
   if(Serial.available())
   { 
     input=Serial.read();
@@ -90,31 +90,35 @@ void loop()
     {
       case 'i':
         mode = 'i';
-        Serial.println('Entering idle mode...');
+        Serial.println("Entering idle mode...");
         break;
       
       case 'l':
         mode = 'l';
         sample_number = 0;
-        Serial.println('Entering launch mode...');
+        Serial.println("Entering launch mode...");
         break;
         
       case 'd':
-        int nextpage = 0;
+        nextpage = 0;
+        for(int i = 0; i < PAGE_SIZE; i++) {pdata.bytes[i] = 0;}
         do
         {
-          flash.readSequentialPage(nextpage, pdata.bytes);
+          Serial.print("Reading page ");
+          Serial.println(nextpage);
+          flash.readPage(nextpage, pdata.bytes);
           nextpage = flash.nextWrittenPage(nextpage);
 
         
           for (int i = 0; i < samples_per_page; i++)
           {
-            curr_data = pdata.entries[i];
-            serialPrintSamples(curr_data);
+            serialPrintSample(pdata.entries[i]);
           }          
         } while (nextpage != -1);
+
+        break;
       case 'e':
-        Serial.print("Erasing memory... ")
+        Serial.print("Erasing memory... ");
         flash.chipErase();
         Serial.println("Done!");
         break;
@@ -126,7 +130,7 @@ void loop()
   {
     ;
   }  
-  else if (mode == 'l');
+  else if (mode == 'l')
   {
     lsm.read();
     sensor_sample curr;
@@ -142,14 +146,39 @@ void loop()
     curr.mag_y = lsm.magData.y;
     curr.mag_z = lsm.magData.z;
     curr.temp = lsm.temperature;
+    curr.line = 0xA;
     pdata.entries[sample_number] = curr;
+    if(Serial1)
+    {
+      Serial.print("Sample ");
+      Serial.print(sample_number);
+      Serial.print(":");
+      serialPrintSample(curr);
+    }
 
     sample_number++;
 
     if(sample_number >= samples_per_page)
     {
-      flash.writeSequentialPage(pdata.bytes, PAGE_SIZE);
+      int err;
+      err = flash.writeSequentialPage(pdata.bytes, PAGE_SIZE);
+
+      if (err == -1)
+      {
+        if (Serial1) Serial.println("ERROR: memory write out of bounds");
+      }
+      else
+      {
+        if (Serial1)
+        {
+          Serial.print("Writing page ");
+          Serial.println(err);
+        }
+      }
+      
       sample_number = 0;
+      for(int i = 0; i < PAGE_SIZE; i++) {pdata.bytes[i] = 0;}
+
     }      
   }
 }
@@ -157,25 +186,25 @@ void loop()
 
 void serialPrintSample(sensor_sample curr_data)
 {
-  Serial.print(curr_data.timestamp);
+  Serial.print(curr_data.timestamp, HEX);
   Serial.print(',');
-  Serial.print(curr_data.xm_x);
+  Serial.print(curr_data.xm_x, HEX);
   Serial.print(',');
-  Serial.print(curr_data.xm_y);
+  Serial.print(curr_data.xm_y, HEX);
   Serial.print(',');   
-  Serial.print(curr_data.xm_z);
+  Serial.print(curr_data.xm_z, HEX);
   Serial.print(','); 
-  Serial.print(curr_data.gyr_x);
+  Serial.print(curr_data.gyr_x, HEX);
   Serial.print(',');
-  Serial.print(curr_data.gyr_y);
+  Serial.print(curr_data.gyr_y, HEX);
   Serial.print(',');
-  Serial.print(curr_data.gyr_z);
+  Serial.print(curr_data.gyr_z, HEX);
   Serial.print(',');
-  Serial.print(curr_data.mag_x);
+  Serial.print(curr_data.mag_x, HEX);
   Serial.print(',');
-  Serial.print(curr_data.mag_y);
+  Serial.print(curr_data.mag_y, HEX);
   Serial.print(',');
-  Serial.print(curr_data.mag_z);
+  Serial.print(curr_data.mag_z, HEX);
   Serial.print(',');
-  Serial.println(curr_data.temp);
+  Serial.println(curr_data.temp, HEX);
 }

@@ -55,10 +55,10 @@ int spiflash::isBusy()
 //read status register
 uint8_t spiflash::readStatusRegister()
 {
-	digitalWrite(_ce, LOW);
+	digitalWrite(_cs, LOW);
 	SPI.transfer(FLASH_RDSR);
 	int sreg = SPI.transfer(0x00);
-	digitalWrite(_ce, HIGH);
+	digitalWrite(_cs, HIGH);
 	return sreg;
 }
 
@@ -81,36 +81,39 @@ int spiflash::writeSequentialPage(uint8_t *data, int numbytes)
     if (numbytes > PAGE_SIZE)
         return -1;
 
-	while(page_table[head])
-		head++;
+	while(page_table[spiflash::head])
+		spiflash::head++;
 	
 	if (head >= NUM_PAGES)
 		return -1;
 	
 	long addr = PAGE_TO_ADDRESS(head);
 	writeBytes(addr, data, numbytes);
+	
+	return spiflash::head;
 }
 
 void spiflash::writeBytes(long address, uint8_t *data, int numbytes)
 {
   writeEnable();
-  digitalWrite(_ce, LOW);
+  digitalWrite(_cs, LOW);
   SPI.transfer(FLASH_PP);
-  SPI.transfer(address >> 16);
-  SPI.transfer(address >> 8);
-  SPI.transfer(address);
+  SPI.transfer(ADDRESS_BYTE0(address));
+  SPI.transfer(ADDRESS_BYTE1(address));
+  SPI.transfer(ADDRESS_BYTE2(address));
   for (int i = 0; i < numbytes; i++)
   {
      SPI.transfer(*data);
      data++;
   }
-  digitalWrite(_ce, HIGH);
-  page_table[address >> 8] = 1;
+  digitalWrite(_cs, HIGH);
+  page_table[ADDRESS_TO_PAGE(address)] = 1;
   while(isBusy());
 }
 
-int nextWrittenPage(int readhead)
+int spiflash::nextWrittenPage(int readhead)
 {
+	
     do
     {
         readhead++;
@@ -126,7 +129,7 @@ int nextWrittenPage(int readhead)
 
 void spiflash::readPage(int page, uint8_t *data)
 {
-    digitalWrite(_ce, LOW);
+    digitalWrite(_cs, LOW);
 
     long addr = PAGE_TO_ADDRESS(page);
 
@@ -138,13 +141,16 @@ void spiflash::readPage(int page, uint8_t *data)
     for (int i = 0; i < PAGE_SIZE; i++)
     {
         *data = SPI.transfer(0x0);
-        data++
+        data++;
     }
+	
+	digitalWrite(_cs, HIGH);
+	
 }
 
 void spiflash::readBytes(long address, uint8_t *data, int numbytes)
 {
-  digitalWrite(_ce, LOW);
+  digitalWrite(_cs, LOW);
   SPI.transfer(FLASH_FASTREAD);
   SPI.transfer(ADDRESS_BYTE0(address));
   SPI.transfer(ADDRESS_BYTE1(address));
@@ -156,5 +162,5 @@ void spiflash::readBytes(long address, uint8_t *data, int numbytes)
     data++;
   }
  
-  digitalWrite(_ce, HIGH);
+  digitalWrite(_cs, HIGH);
 }
