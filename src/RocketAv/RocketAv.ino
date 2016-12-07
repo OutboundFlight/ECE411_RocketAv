@@ -3,6 +3,10 @@
 #include <Adafruit_Sensor.h>
 #include <tinyav_spiflash.h>
 
+#define SENSOR_STALL 25
+
+#define SERIAL_DEBUG
+
 // Define enable pins
 #define MEM_EN 22
 #define GYR_EN A2
@@ -74,6 +78,7 @@ void setup()
   }
   sample_number = 0;
   mode = 'i';
+  flash.unprotect();
 }
 
 void loop() 
@@ -83,6 +88,7 @@ void loop()
   char input;
   int nextpage;
   if(Serial1)
+  {
   if(Serial.available())
   { 
     input=Serial.read();
@@ -102,19 +108,21 @@ void loop()
       case 'd':
         nextpage = 0;
         for(int i = 0; i < PAGE_SIZE; i++) {pdata.bytes[i] = 0;}
-        do
+        Serial.print("Reading from flash head at 0x");
+        Serial.println(flash.getHead(), HEX);
+        for(uint16_t i = 0; i < flash.getHead(); i++)
         {
-          Serial.print("Reading page ");
-          Serial.println(nextpage);
-          flash.readPage(nextpage, pdata.bytes);
-          nextpage = flash.nextWrittenPage(nextpage);
-
-        
-          for (int i = 0; i < samples_per_page; i++)
+     
+//          Serial.print("Reading page ");
+//          Serial.println(i);
+          uint32_t addr = flash.readPage(i, pdata.bytes);
+//          Serial.print("Actual address ");
+//          Serial.println(addr, HEX);
+          for (int j = 0; j < samples_per_page; j++)
           {
-            serialPrintSample(pdata.entries[i]);
+            serialPrintSample(pdata.entries[j]);
           }          
-        } while (nextpage != -1);
+        };
 
         break;
       case 'e':
@@ -125,6 +133,7 @@ void loop()
       }
       Serial.print("Please select: [i]dle mode, [l]aunch mode, [d]ownload data, [e]rase memory? ");
     }
+  }
     
   if (mode == 'i')
   {
@@ -132,6 +141,7 @@ void loop()
   }  
   else if (mode == 'l')
   {
+    delay(SENSOR_STALL);
     lsm.read();
     sensor_sample curr;
 
@@ -148,6 +158,8 @@ void loop()
     curr.temp = lsm.temperature;
     curr.line = 0xA;
     pdata.entries[sample_number] = curr;
+
+    #ifdef SERIAL_DEBUG
     if(Serial1)
     {
       Serial.print("Sample ");
@@ -155,6 +167,7 @@ void loop()
       Serial.print(":");
       serialPrintSample(curr);
     }
+    #endif
 
     sample_number++;
 
@@ -162,49 +175,45 @@ void loop()
     {
       int err;
       err = flash.writeSequentialPage(pdata.bytes, PAGE_SIZE);
-
-      if (err == -1)
-      {
-        if (Serial1) Serial.println("ERROR: memory write out of bounds");
-      }
-      else
-      {
-        if (Serial1)
-        {
-          Serial.print("Writing page ");
-          Serial.println(err);
-        }
-      }
       
       sample_number = 0;
       for(int i = 0; i < PAGE_SIZE; i++) {pdata.bytes[i] = 0;}
 
-    }      
+    #ifdef SERIAL_DEBUG
+    Serial.print("Printing page");
+    Serial.println(err);
+    Serial.print("Head location: ");
+    Serial.println(flash.getHead(), HEX);
+    Serial.print("Address equivalent: ");
+    Serial.println(((uint32_t)flash.getHead()) << 8, HEX);
+    #endif
+    }
+
   }
 }
 
 
 void serialPrintSample(sensor_sample curr_data)
 {
-  Serial.print(curr_data.timestamp, HEX);
+  Serial.print(curr_data.timestamp);
   Serial.print(',');
-  Serial.print(curr_data.xm_x, HEX);
+  Serial.print(curr_data.xm_x);
   Serial.print(',');
-  Serial.print(curr_data.xm_y, HEX);
+  Serial.print(curr_data.xm_y);
   Serial.print(',');   
-  Serial.print(curr_data.xm_z, HEX);
+  Serial.print(curr_data.xm_z);
   Serial.print(','); 
-  Serial.print(curr_data.gyr_x, HEX);
+  Serial.print(curr_data.gyr_x);
   Serial.print(',');
-  Serial.print(curr_data.gyr_y, HEX);
+  Serial.print(curr_data.gyr_y);
   Serial.print(',');
-  Serial.print(curr_data.gyr_z, HEX);
+  Serial.print(curr_data.gyr_z);
   Serial.print(',');
-  Serial.print(curr_data.mag_x, HEX);
+  Serial.print(curr_data.mag_x);
   Serial.print(',');
-  Serial.print(curr_data.mag_y, HEX);
+  Serial.print(curr_data.mag_y);
   Serial.print(',');
-  Serial.print(curr_data.mag_z, HEX);
+  Serial.print(curr_data.mag_z);
   Serial.print(',');
-  Serial.println(curr_data.temp, HEX);
+  Serial.println(curr_data.temp);
 }
