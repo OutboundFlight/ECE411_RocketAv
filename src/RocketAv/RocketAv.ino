@@ -8,31 +8,35 @@
 #define GYR_EN A2
 #define XM_EN A3
 
+#define BAUD 115200
+
 // Hardware SPI setup for sensor
 Adafruit_LSM9DS0 lsm = Adafruit_LSM9DS0(XM_EN, GYR_EN);
 
-
-union sensorData {
-struct Data {
-  long timestamp
-  int xm_x
-  int xm_y
-  int xm_z
-  int gyr_x
-  int gyr_y
-  int gyr_z
-  int mag_x
-  int mag_y
-  int mag_z
-  int temp
+struct sensor_sample {
+  long timestamp;
+  int xm_x;
+  int xm_y;
+  int xm_z;
+  int gyr_x;
+  int gyr_y;
+  int gyr_z;
+  int mag_x;
+  int mag_y;
+  int mag_z;
+  int temp;
   char line = 0xA;
-}
-uint8_t()
-}
+};
 
-address 
+samples_per_page = PAGE_SIZE/size(sensor_sample);
 
-sensordata bufferData[11] = {0}
+union page 
+{
+  sensor_sample entries[samples_per_page];
+  uint8_t bytes [PAGE_SIZE];
+};
+  
+sensor_union bufferData[11];
 
 void setupSensor()
 {
@@ -44,10 +48,10 @@ void setupSensor()
   lsm.setupAccel(lsm.LSM9DS0_ACCELRANGE_16G);
   
   // 2.) Set the magnetometer sensitivity
-  //lsm.setupMag(lsm.LSM9DS0_MAGGAIN_2GAUSS);
+  lsm.setupMag(lsm.LSM9DS0_MAGGAIN_2GAUSS);
   //lsm.setupMag(lsm.LSM9DS0_MAGGAIN_4GAUSS);
   //lsm.setupMag(lsm.LSM9DS0_MAGGAIN_8GAUSS);
-  lsm.setupMag(lsm.LSM9DS0_MAGGAIN_12GAUSS);
+  //lsm.setupMag(lsm.LSM9DS0_MAGGAIN_12GAUSS);
 
   // 3.) Setup the gyroscope
   //lsm.setupGyro(lsm.LSM9DS0_GYROSCALE_245DPS);
@@ -59,82 +63,119 @@ void setupSensor()
 
 void setup() 
 {
-  Serial.begin(9600);
+  Serial.begin(BAUD);
   Serial.println("~~RocketAV software version 1.0~~");
   spiflash flash;
   flash.init(MEM_EN);
+  setupSensor();
+  Serial.print("Please select: [i]dle mode, [l]aunch mode, [d]ownload data, [e]rase memory? ");
+  if (!lsm.begin()) {
+    Serial.println("Oops ... unable to initialize the LSM9DS0. Check your wiring!");
+  }
+
 }
 
 void loop() 
 {
 // Wait for USB port communication
-  #ifndef ESP8266
-    while (!Serial);
-  #endif
 
-
+  char mode = 'i';
+  page pdata;
+  int sample_number = 0;
   
-// Prompt for mode select
-  Serial.println("Please select: [i]dle, [l]aunch, or [o]ptions?");
-  input=Serial.read();
-
-
-
-// Options
-  if (input="o") {
-    Serial.println("Please select: [d]ownload data or [e]rase memory");
+  if(Serial.available())
+  { 
     input=Serial.read();
-  // Download data
-    nextpage=0;    
-    if (input="d") {
-      while (nextpage!=-1){
-        nextpage=flash.nextWrittenPage()
-        flash.readSequentialPage(nextpage,bufferData)
-        for (i=1:10){
-          Serial.print(bufferData[i])
-        }
+    switch (input)
+    {
+      case 'i':
+        mode = 'i';
+        Serial.println('Entering idle mode...');
+        break;
+      
+      case 'l':
+        mode = 'l';
+        sample_number = 0;
+        Serial.println('Entering launch mode...');
+        break;
+        
+      case 'd':
+        int nextpage = 0;
+        do
+        {
+          flash.readSequentialPage(nextpage, pdata.bytes);
+          nextpage = flash.nextWrittenPage(nextpage);
+
+        
+          for (int i = 0; i < samples_per_page; i++)
+          {
+            curr_data = pdata.entries[i];
+            serialPrintSamples(curr_data);
+          }          
+        } while (nextpage != -1);
+      case 'e':
+        Serial.print("Erasing memory... ")
+        flash.chipErase();
+        Serial.println("Done!");
+        break;
       }
+      Serial.print("Please select: [i]dle mode, [l]aunch mode, [d]ownload data, [e]rase memory? ");
     }
-  // Erase data
-    if (input="e") {
-      flash.chipErase()
-      Serial.println("Memory erased!")
-    }
-  }
-
-
-
-// Launch
-  else if (input="l") { 
-  // Try to initialise and warn if chip not detected
-    if (!lsm.begin()) {
-      Serial.println("Oops ... unable to initialize the LSM9DS0. Check your wiring!");
-      break;
-    }
-    Serial.println("Found LSM9DS0 9DOF");
-    Serial.println("");
-    Serial.println("");
-
-  // Read sensor
+    
+  if (mode == 'i')
+  {
+    ;
+  }  
+  else if (mode == 'l');
+  {
     lsm.read();
-    databuffer[a]=[millis(),lsm.accelData.x,lsm.accelData.y,lsm.accelData.z,lsm.gyroData.x,lsm.gyroData.y,lsm.gyroData.z
+    sensor_sample curr;
 
-    
-  // Write to flash memory
+    curr.timestamp = millis();
+    curr.xm_x = lsm.accelData.x;
+    curr.xm_y = lsm.accelData.y;
+    curr.xm_z = lsm.accelData.z;
+    curr.gyr_x = lsm.gyroData.x;
+    curr.gyr_y = lsm.gyroData.y;
+    curr.gyr_z = lsm.gyroData.z;
+    curr.mag_x = lsm.magData.x;
+    curr.mag_y = lsm.magData.y;
+    curr.mag_z = lsm.magData.z;
+    curr.temp = lsm.temperature;
+    pdata.entries[sample_number] = curr;
+
+    sample_number++;
+
+    if(sample_number >= samples_per_page)
+    {
+      flash.writeSequentialPage(pdata.bytes, PAGE_SIZE);
+      sample_number = 0;
+    }      
   }
+}
 
 
-
-// Idle
-  else if (input="i"){
-    
-  }
-
-
-  
-// Invalid input message
-  else {
-    Serial.println("INVALID INPUT, YA DINGUS!!!")
-  }
-  
+void serialPrintSample(sensor_sample curr_data)
+{
+  Serial.print(curr_data.timestamp);
+  Serial.print(',');
+  Serial.print(curr_data.xm_x);
+  Serial.print(',');
+  Serial.print(curr_data.xm_y);
+  Serial.print(',');   
+  Serial.print(curr_data.xm_z);
+  Serial.print(','); 
+  Serial.print(curr_data.gyr_x);
+  Serial.print(',');
+  Serial.print(curr_data.gyr_y);
+  Serial.print(',');
+  Serial.print(curr_data.gyr_z);
+  Serial.print(',');
+  Serial.print(curr_data.mag_x);
+  Serial.print(',');
+  Serial.print(curr_data.mag_y);
+  Serial.print(',');
+  Serial.print(curr_data.mag_z);
+  Serial.print(',');
+  Serial.println(curr_data.temp);
 }
