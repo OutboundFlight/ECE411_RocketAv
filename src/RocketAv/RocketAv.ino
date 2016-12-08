@@ -3,7 +3,7 @@
 #include <Adafruit_Sensor.h>
 #include <tinyav_spiflash.h>
 
-#define SENSOR_STALL 25
+#define SENSOR_STALL 2
 
 //#define SERIAL_DEBUG
 
@@ -104,6 +104,8 @@ void loop()
         mode = 'l';
         sample_number = 0;
         Serial.println("Entering launch mode...");
+        Serial.println("Beginning 60s launch timer...");
+        delay(120000);
         break;
         
       case 'd':
@@ -113,7 +115,7 @@ void loop()
         Serial.println(flash.getHead(), HEX);
         for(uint16_t i = 0; i < flash.getHead(); i++)
         {
-     
+
 //          Serial.print("Reading page ");
 //          Serial.println(i);
           uint32_t addr = flash.readPage(i, pdata.bytes);
