@@ -71,11 +71,12 @@ void setup()
   Serial.begin(BAUD);
   Serial.println("~~RocketAV software version 1.0~~");
   flash.init(MEM_EN);
-  setupSensor();
   Serial.print("Please select: [i]dle mode, [l]aunch mode, [d]ownload data, [e]rase memory? ");
   if (!lsm.begin()) {
     Serial.println("Oops ... unable to initialize the LSM9DS0. Check your wiring!");
   }
+
+  setupSensor();
   sample_number = 0;
   mode = 'i';
   flash.unprotect();
