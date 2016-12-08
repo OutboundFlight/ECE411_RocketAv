@@ -63,12 +63,16 @@ class spiflash
 		void writeBytes(long address, uint8_t *data, int numbytes);
 		void readBytes(long address, uint8_t *data, int numbytes);
 		void init(int cs);
-		int writeSequentialPage(uint8_t *data, int numbytes);
+		uint32_t writeSequentialPage(uint8_t *data, int numbytes);
+//		int nextWrittenPage(int readhead);
+		uint32_t readPage(uint32_t page, uint8_t *data);
+		void bytecommand(uint8_t code);
+		uint32_t getHead();
 		
 	protected:
-		uint8_t head;               //pointer to current memory location
+		uint32_t head;                   //pointer to current memory location
 		uint8_t _cs;                //select line for this device
-		bool page_table[NUM_PAGES]; //tracks which pages have been written
+//		bool page_table[NUM_PAGES];
 };
 
 #endif

@@ -1,9 +1,9 @@
 #include <tinyav_spiflash.h>
 #define PAGE_TO_ADDRESS(a) (a << 8)
 #define ADDRESS_TO_PAGE(a) (a >> 8)
-#define ADDRESS_BYTE0(a) ((a & 0x110000) >> 16)
-#define ADDRESS_BYTE1(a) ((a & 0x001100) >> 8)
-#define ADDRESS_BYTE2(a) (a & 0x000011)
+#define ADDRESS_BYTE0(a) ((a & 0xff0000) >> 16)
+#define ADDRESS_BYTE1(a) ((a & 0x00ff00) >> 8)
+#define ADDRESS_BYTE2(a) (a & 0x0000ff)
 
 //Pass a single-byte command to the device
 void spiflash::bytecommand(uint8_t code)
@@ -36,8 +36,8 @@ void spiflash::chipErase()//
 
 	bytecommand(FLASH_CHIPERASE);
 
-    for (int i = 0; i < NUM_PAGES; i++)     //reset the page table
-	  page_table[i] = 0;
+//   for (int i = 0; i < NUM_PAGES; i++)     //reset the page table
+//	  page_table[i] = 0;
   
   head = 0;                                 //set the head to lowest address
 
@@ -55,62 +55,76 @@ int spiflash::isBusy()
 //read status register
 uint8_t spiflash::readStatusRegister()
 {
-	digitalWrite(_ce, LOW);
+	digitalWrite(_cs, LOW);
 	SPI.transfer(FLASH_RDSR);
 	int sreg = SPI.transfer(0x00);
-	digitalWrite(_ce, HIGH);
+	digitalWrite(_cs, HIGH);
 	return sreg;
 }
 
 //write the status register to unprotect the sectors.
 //NOT TESTED. DO NOT USE.
-/*
+
 void spiflash::unprotect()
 {
-  digitalWrite(_ce, LOW);
+  digitalWrite(_cs, LOW);
   SPI.transfer(FLASH_WRSR);
   SPI.transfer(0x00);
-  digitalWrite(_ce, HIGH);
+  digitalWrite(_cs, HIGH);
 }
 
-*/
+
 
 //Writes to the next available page in program memory
-int spiflash::writeSequentialPage(uint8_t *data, int numbytes)
+uint32_t spiflash::writeSequentialPage(uint8_t *data, int numbytes)
 {
+	
     if (numbytes > PAGE_SIZE)
+	{
         return -1;
-
-	while(page_table[head])
-		head++;
+	}
 	
-	if (head >= NUM_PAGES)
+	if (spiflash::head >= NUM_PAGES)
+	{
 		return -1;
+	}
 	
-	long addr = PAGE_TO_ADDRESS(head);
+	uint32_t addr = PAGE_TO_ADDRESS(spiflash::head);
+		
 	writeBytes(addr, data, numbytes);
+	
+	spiflash::head = spiflash::head + 1;
+	
+	return spiflash::head - 1;
+}
+
+uint32_t spiflash::getHead()
+{
+	return spiflash::head;
 }
 
 void spiflash::writeBytes(long address, uint8_t *data, int numbytes)
 {
   writeEnable();
-  digitalWrite(_ce, LOW);
+  digitalWrite(_cs, LOW);
   SPI.transfer(FLASH_PP);
-  SPI.transfer(address >> 16);
-  SPI.transfer(address >> 8);
-  SPI.transfer(address);
+  SPI.transfer(ADDRESS_BYTE0(address));
+  SPI.transfer(ADDRESS_BYTE1(address));
+  SPI.transfer(ADDRESS_BYTE2(address));
   for (int i = 0; i < numbytes; i++)
   {
      SPI.transfer(*data);
      data++;
   }
-  digitalWrite(_ce, HIGH);
-  page_table[address >> 8] = 1;
+  digitalWrite(_cs, HIGH);
+//  page_table[ADDRESS_TO_PAGE(address)] = 1;
   while(isBusy());
 }
 
-int nextWrittenPage(int readhead)
+/*
+int spiflash::nextWrittenPage(int readhead)
 {
+	
     do
     {
         readhead++;
@@ -123,12 +137,13 @@ int nextWrittenPage(int readhead)
     
     return readhead;
 }
+*/
 
-void spiflash::readPage(int page, uint8_t *data)
+uint32_t spiflash::readPage(uint32_t page, uint8_t *data)
 {
-    digitalWrite(_ce, LOW);
+    digitalWrite(_cs, LOW);
 
-    long addr = PAGE_TO_ADDRESS(page);
+    uint32_t addr = PAGE_TO_ADDRESS(page);
 
     SPI.transfer(FLASH_FASTREAD);
     SPI.transfer(ADDRESS_BYTE0(addr));
@@ -138,13 +153,16 @@ void spiflash::readPage(int page, uint8_t *data)
     for (int i = 0; i < PAGE_SIZE; i++)
     {
         *data = SPI.transfer(0x0);
-        data++
+        data++;
     }
+	
+	digitalWrite(_cs, HIGH);
+	return addr;
 }
 
 void spiflash::readBytes(long address, uint8_t *data, int numbytes)
 {
-  digitalWrite(_ce, LOW);
+  digitalWrite(_cs, LOW);
   SPI.transfer(FLASH_FASTREAD);
   SPI.transfer(ADDRESS_BYTE0(address));
   SPI.transfer(ADDRESS_BYTE1(address));
@@ -156,5 +174,5 @@ void spiflash::readBytes(long address, uint8_t *data, int numbytes)
     data++;
   }
  
-  digitalWrite(_ce, HIGH);
+  digitalWrite(_cs, HIGH);
 }
