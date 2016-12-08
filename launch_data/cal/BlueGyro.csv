@@ -1,5 +1,3 @@
-Entering idle mode...
-Please select: [i]dle mode, [l]aunch mode, [d]ownload data, [e]rase memory? Reading from flash head at 0x200
 24606,-3889,904,16063,-488,-179,-597,2617,-2469,3851,-40
 24633,-3852,817,15933,-497,-210,-570,2636,-2470,3786,-40
 24659,-3917,819,16082,-478,-129,-613,2607,-2461,3793,-41
@@ -5120,4 +5118,3 @@ Please select: [i]dle mode, [l]aunch mode, [d]ownload data, [e]rase memory? Read
 173340,-695,597,-16618,-485,-91,-537,3473,2756,-5247,-32
 173367,-870,679,-16645,-498,16,-492,3501,2763,-5276,-31
 173393,-690,685,-16538,-497,-31,-485,3480,2761,-5271,-32
-Please select: [i]dle mode, [l]aunch mode, [d]ownload data, [e]rase memory? 

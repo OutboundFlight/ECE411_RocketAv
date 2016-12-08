@@ -1,8 +1,3 @@
-Entering idle mode...
-Please select: [i]dle mode, [l]aunch mode, [d]ownload data, [e]rase memory? Erasing memory... Done!
-Please select: [i]dle mode, [l]aunch mode, [d]ownload data, [e]rase memory? Entering launch mode...
-Please select: [i]dle mode, [l]aunch mode, [d]ownload data, [e]rase memory? Entering idle mode...
-Please select: [i]dle mode, [l]aunch mode, [d]ownload data, [e]rase memory? Reading from flash head at 0x4D
 445759,117,-472,1229,-23,-309,-25,-3149,1598,7847,-24
 445788,101,-501,1249,-39,-316,-15,-3144,1576,7878,-24
 445814,129,-501,1248,-41,-311,-25,-3140,1605,7850,-23
@@ -773,4 +768,3 @@ Please select: [i]dle mode, [l]aunch mode, [d]ownload data, [e]rase memory? Read
 468060,154,42,-1410,-16,-272,-22,120,771,-4005,-25
 468088,176,49,-1421,-21,-296,-25,125,780,-4010,-25
 468115,155,47,-1423,-27,-297,-35,126,741,-4069,-25
-Please select: [i]dle mode, [l]aunch mode, [d]ownload data, [e]rase memory? 
