@@ -5,7 +5,7 @@
 
 #define SENSOR_STALL 25
 
-#define SERIAL_DEBUG
+//#define SERIAL_DEBUG
 
 // Define enable pins
 #define MEM_EN 22
