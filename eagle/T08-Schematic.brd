@@ -154,8 +154,8 @@
 <text x="42.926" y="2.921" size="0.254" layer="21" font="vector" rot="R180">VCC</text>
 <text x="11.049" y="24.257" size="0.254" layer="21" font="vector">VBAT</text>
 <text x="23.495" y="27.94" size="1.778" layer="150">Tiny AV Board Layout
-Rev: A
-Date: 12/01/2016
+Rev: 1.0
+Date: 12/08/2016
 Team 08</text>
 </plain>
 <libraries>

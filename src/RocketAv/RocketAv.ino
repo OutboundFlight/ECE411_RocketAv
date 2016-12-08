@@ -3,9 +3,13 @@
 #include <Adafruit_Sensor.h>
 #include <tinyav_spiflash.h>
 
+<<<<<<< HEAD
 #define SENSOR_STALL 500
+=======
+#define SENSOR_STALL 2
+>>>>>>> fb0c2504455b0344f5e2abb3f410a9312219e369
 
-#define SERIAL_DEBUG
+//#define SERIAL_DEBUG
 
 // Define enable pins
 #define MEM_EN 22
@@ -71,11 +75,18 @@ void setup()
   Serial.begin(BAUD);
   Serial.println("~~RocketAV software version 1.0~~");
   flash.init(MEM_EN);
+<<<<<<< HEAD
 
+=======
+>>>>>>> fb0c2504455b0344f5e2abb3f410a9312219e369
   Serial.print("Please select: [i]dle mode, [l]aunch mode, [d]ownload data, [e]rase memory? ");
   if (!lsm.begin()) {
     Serial.println("Oops ... unable to initialize the LSM9DS0. Check your wiring!");
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> fb0c2504455b0344f5e2abb3f410a9312219e369
   setupSensor();
   sample_number = 0;
   mode = 'i';
@@ -104,6 +115,8 @@ void loop()
         mode = 'l';
         sample_number = 0;
         Serial.println("Entering launch mode...");
+        Serial.println("Beginning 60s launch timer...");
+        delay(120000);
         break;
         
       case 'd':
@@ -113,7 +126,7 @@ void loop()
         Serial.println(flash.getHead(), HEX);
         for(uint16_t i = 0; i < flash.getHead(); i++)
         {
-     
+
 //          Serial.print("Reading page ");
 //          Serial.println(i);
           uint32_t addr = flash.readPage(i, pdata.bytes);
