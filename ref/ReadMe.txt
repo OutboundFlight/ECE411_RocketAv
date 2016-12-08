@@ -49,6 +49,23 @@ Programming:
 	Port: Lilypad USB (COMX)
 	Programmer: AVRISP mkll
 
+--------------------------------------------------------------------------------------------------------------
+Launch Procedure:
 
-	
+Set up rocket
+Turn on the tinyav board. Connect to USB port.
+Get IMU sample data
+	Ensure xm is calibrated correctly (1g should be about integer 2000)
+	Check sample rate
+Upload correct sketch
+	Ensure the arduino sketch is not in debug mode
+	Set a launch countdown timer in the sketch
+Erase the memory chip
+Insert motor with igniter. 
+Set the arduino into launch mode. Start a stopwatch.
+Detach the USB cable.
+Place the tinyav board in the rocket.
+Attach ignition control leads to igniter leads.
+Clear launch zone.
+Launch. 
 
