@@ -10175,16 +10175,18 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="TP14" library="testpad" deviceset="TP" device="TP08R"/>
 <part name="TP15" library="testpad" deviceset="TP" device="TP08R"/>
 <part name="R17" library="rcl" deviceset="R-US_" device="R0603" value="0"/>
-<part name="U$1" library="tinyav-lib" deviceset="BQ21040" device=""/>
+<part name="U4" library="tinyav-lib" deviceset="BQ21040" device=""/>
 <part name="SUPPLY1" library="supply2" deviceset="GND" device=""/>
 <part name="R1" library="rcl" deviceset="R-US_" device="R0603" value="5.36k"/>
 <part name="SUPPLY3" library="supply2" deviceset="GND" device=""/>
-<part name="U$2" library="tinyav-lib" deviceset="LSM6DS3" device=""/>
+<part name="U3" library="tinyav-lib" deviceset="LSM6DS3" device=""/>
 <part name="SUPPLY7" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY9" library="supply2" deviceset="GND" device=""/>
-<part name="U$3" library="tinyav-lib" deviceset="M25PX16" device=""/>
+<part name="U2" library="tinyav-lib" deviceset="M25PX16" device=""/>
 <part name="P+11" library="supply1" deviceset="VCC" device="" value="+3.3V"/>
 <part name="SUPPLY10" library="supply2" deviceset="GND" device=""/>
+<part name="C3" library="rcl" deviceset="C-EU" device="C0603" value="2.2µ"/>
+<part name="SUPPLY14" library="supply2" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -10399,16 +10401,18 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <attribute name="NAME" x="183.896" y="160.8074" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="180.848" y="156.972" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="U$1" gate="BQ21040" x="68.58" y="248.92"/>
+<instance part="U4" gate="BQ21040" x="68.58" y="248.92"/>
 <instance part="SUPPLY1" gate="GND" x="55.88" y="238.76"/>
 <instance part="R1" gate="G$1" x="48.26" y="220.98" rot="R90"/>
 <instance part="SUPPLY3" gate="GND" x="48.26" y="213.36"/>
-<instance part="U$2" gate="G$1" x="312.42" y="175.26"/>
+<instance part="U3" gate="G$1" x="312.42" y="175.26"/>
 <instance part="SUPPLY7" gate="GND" x="292.1" y="154.94"/>
 <instance part="SUPPLY9" gate="GND" x="332.74" y="177.8"/>
-<instance part="U$3" gate="G$1" x="312.42" y="218.44"/>
+<instance part="U2" gate="G$1" x="312.42" y="218.44"/>
 <instance part="P+11" gate="VCC" x="330.2" y="231.14"/>
 <instance part="SUPPLY10" gate="GND" x="294.64" y="203.2"/>
+<instance part="C3" gate="G$1" x="190.5" y="248.92" rot="MR0"/>
+<instance part="SUPPLY14" gate="GND" x="190.5" y="241.3"/>
 </instances>
 <busses>
 </busses>
@@ -10550,7 +10554,7 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <pinref part="SUPPLY23" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="BQ21040" pin="GND"/>
+<pinref part="U4" gate="BQ21040" pin="GND"/>
 <wire x1="55.88" y1="246.38" x2="55.88" y2="241.3" width="0.1524" layer="91"/>
 <pinref part="SUPPLY1" gate="GND" pin="GND"/>
 </segment>
@@ -10559,20 +10563,20 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <pinref part="SUPPLY3" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="GND"/>
+<pinref part="U3" gate="G$1" pin="GND"/>
 <wire x1="297.18" y1="165.1" x2="292.1" y2="165.1" width="0.1524" layer="91"/>
 <wire x1="292.1" y1="165.1" x2="292.1" y2="162.56" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="GND2"/>
+<pinref part="U3" gate="G$1" pin="GND2"/>
 <wire x1="292.1" y1="162.56" x2="297.18" y2="162.56" width="0.1524" layer="91"/>
 <wire x1="292.1" y1="162.56" x2="292.1" y2="157.48" width="0.1524" layer="91"/>
 <junction x="292.1" y="162.56"/>
 <pinref part="SUPPLY7" gate="GND" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="SDX"/>
+<pinref part="U3" gate="G$1" pin="SDX"/>
 <wire x1="327.66" y1="185.42" x2="332.74" y2="185.42" width="0.1524" layer="91"/>
 <wire x1="332.74" y1="185.42" x2="332.74" y2="182.88" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="SCX"/>
+<pinref part="U3" gate="G$1" pin="SCX"/>
 <wire x1="332.74" y1="182.88" x2="327.66" y2="182.88" width="0.1524" layer="91"/>
 <wire x1="332.74" y1="182.88" x2="332.74" y2="180.34" width="0.1524" layer="91"/>
 <junction x="332.74" y="182.88"/>
@@ -10581,8 +10585,12 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <segment>
 <pinref part="SUPPLY10" gate="GND" pin="GND"/>
 <wire x1="294.64" y1="205.74" x2="294.64" y2="208.28" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="VSS"/>
+<pinref part="U2" gate="G$1" pin="VSS"/>
 <wire x1="294.64" y1="208.28" x2="297.18" y2="208.28" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C3" gate="G$1" pin="2"/>
+<pinref part="SUPPLY14" gate="GND" pin="GND"/>
 </segment>
 </net>
 <net name="CLK" class="0">
@@ -10600,9 +10608,9 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <wire x1="233.68" y1="116.84" x2="210.82" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="210.82" y1="116.84" x2="210.82" y2="127" width="0.1524" layer="91"/>
 <junction x="210.82" y="127"/>
-<pinref part="U$2" gate="G$1" pin="SCL"/>
+<pinref part="U3" gate="G$1" pin="SCL"/>
 <wire x1="345.44" y1="165.1" x2="327.66" y2="165.1" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="CLK"/>
+<pinref part="U2" gate="G$1" pin="CLK"/>
 <wire x1="284.48" y1="218.44" x2="297.18" y2="218.44" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -10620,11 +10628,11 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <wire x1="233.68" y1="119.38" x2="220.98" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="220.98" y1="119.38" x2="220.98" y2="129.54" width="0.1524" layer="91"/>
 <junction x="220.98" y="129.54"/>
-<pinref part="U$2" gate="G$1" pin="SDO/SA0"/>
+<pinref part="U3" gate="G$1" pin="SDO/SA0"/>
 <wire x1="350.52" y1="187.96" x2="327.66" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="281.94" y1="129.54" x2="281.94" y2="220.98" width="0.1524" layer="91"/>
 <junction x="281.94" y="129.54"/>
-<pinref part="U$3" gate="G$1" pin="DQ1(MISO)"/>
+<pinref part="U2" gate="G$1" pin="DQ1(MISO)"/>
 <wire x1="281.94" y1="220.98" x2="297.18" y2="220.98" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -10643,9 +10651,9 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <wire x1="251.46" y1="116.84" x2="251.46" y2="132.08" width="0.1524" layer="91"/>
 <junction x="251.46" y="132.08"/>
 <wire x1="347.98" y1="132.08" x2="347.98" y2="162.56" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="SDA"/>
+<pinref part="U3" gate="G$1" pin="SDA"/>
 <wire x1="347.98" y1="162.56" x2="327.66" y2="162.56" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="DQ0(MOSI)"/>
+<pinref part="U2" gate="G$1" pin="DQ0(MOSI)"/>
 <wire x1="279.4" y1="223.52" x2="297.18" y2="223.52" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -10659,7 +10667,7 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <wire x1="236.22" y1="182.88" x2="241.3" y2="182.88" width="0.1524" layer="91"/>
 <wire x1="241.3" y1="182.88" x2="241.3" y2="172.72" width="0.1524" layer="91"/>
 <wire x1="241.3" y1="172.72" x2="266.7" y2="172.72" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="/S"/>
+<pinref part="U2" gate="G$1" pin="/S"/>
 <wire x1="287.02" y1="215.9" x2="297.18" y2="215.9" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -10672,7 +10680,7 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <wire x1="236.22" y1="175.26" x2="238.76" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="175.26" x2="238.76" y2="170.18" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="170.18" x2="264.16" y2="170.18" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="CS"/>
+<pinref part="U3" gate="G$1" pin="CS"/>
 <wire x1="342.9" y1="180.34" x2="327.66" y2="180.34" width="0.1524" layer="91"/>
 <wire x1="342.9" y1="180.34" x2="342.9" y2="139.7" width="0.1524" layer="91"/>
 </segment>
@@ -10683,6 +10691,9 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <pinref part="C10" gate="G$1" pin="1"/>
 <wire x1="182.88" y1="251.46" x2="182.88" y2="259.08" width="0.1524" layer="91"/>
 <pinref part="P+4" gate="VCC" pin="VCC"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="182.88" y1="251.46" x2="190.5" y2="251.46" width="0.1524" layer="91"/>
+<junction x="182.88" y="251.46"/>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="OUT"/>
@@ -10701,9 +10712,9 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <wire x1="264.16" y1="187.96" x2="264.16" y2="185.42" width="0.1524" layer="91"/>
 <wire x1="274.32" y1="187.96" x2="274.32" y2="193.04" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="VCC" pin="VCC"/>
-<pinref part="U$2" gate="G$1" pin="VDD"/>
+<pinref part="U3" gate="G$1" pin="VDD"/>
 <wire x1="274.32" y1="187.96" x2="292.1" y2="187.96" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="VDDIO"/>
+<pinref part="U3" gate="G$1" pin="VDDIO"/>
 <wire x1="292.1" y1="187.96" x2="297.18" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="297.18" y1="182.88" x2="292.1" y2="182.88" width="0.1524" layer="91"/>
 <wire x1="292.1" y1="182.88" x2="292.1" y2="187.96" width="0.1524" layer="91"/>
@@ -10717,7 +10728,7 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <pinref part="C16" gate="G$1" pin="1"/>
 <wire x1="266.7" y1="228.6" x2="274.32" y2="228.6" width="0.1524" layer="91"/>
 <junction x="274.32" y="228.6"/>
-<pinref part="U$3" gate="G$1" pin="VCC"/>
+<pinref part="U2" gate="G$1" pin="VCC"/>
 <wire x1="292.1" y1="228.6" x2="297.18" y2="228.6" width="0.1524" layer="91"/>
 <junction x="292.1" y="228.6"/>
 </segment>
@@ -10775,9 +10786,9 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <pinref part="P+10" gate="VCC" pin="VCC"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="/WP"/>
+<pinref part="U2" gate="G$1" pin="/WP"/>
 <wire x1="327.66" y1="223.52" x2="330.2" y2="223.52" width="0.1524" layer="91"/>
-<pinref part="U$3" gate="G$1" pin="/HOLD"/>
+<pinref part="U2" gate="G$1" pin="/HOLD"/>
 <wire x1="327.66" y1="215.9" x2="330.2" y2="215.9" width="0.1524" layer="91"/>
 <wire x1="330.2" y1="215.9" x2="330.2" y2="223.52" width="0.1524" layer="91"/>
 <pinref part="P+11" gate="VCC" pin="VCC"/>
@@ -10835,7 +10846,7 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <wire x1="38.1" y1="248.92" x2="38.1" y2="251.46" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="248.92" x2="50.8" y2="248.92" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="248.92" x2="50.8" y2="251.46" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="BQ21040" pin="VIN"/>
+<pinref part="U4" gate="BQ21040" pin="VIN"/>
 <wire x1="50.8" y1="251.46" x2="55.88" y2="251.46" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -10891,7 +10902,7 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <pinref part="TP13" gate="G$1" pin="TP"/>
 <wire x1="106.68" y1="251.46" x2="106.68" y2="254" width="0.1524" layer="91"/>
 <junction x="106.68" y="251.46"/>
-<pinref part="U$1" gate="BQ21040" pin="OUT"/>
+<pinref part="U4" gate="BQ21040" pin="OUT"/>
 <wire x1="81.28" y1="251.46" x2="91.44" y2="251.46" width="0.1524" layer="91"/>
 <junction x="91.44" y="251.46"/>
 </segment>
@@ -11172,7 +11183,7 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <pinref part="R15" gate="G$1" pin="2"/>
 <wire x1="71.12" y1="233.68" x2="71.12" y2="236.22" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="236.22" x2="81.28" y2="236.22" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="BQ21040" pin="/CHG"/>
+<pinref part="U4" gate="BQ21040" pin="/CHG"/>
 <wire x1="81.28" y1="236.22" x2="81.28" y2="246.38" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -11182,7 +11193,7 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <wire x1="48.26" y1="226.06" x2="48.26" y2="246.38" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="246.38" x2="53.34" y2="246.38" width="0.1524" layer="91"/>
 <wire x1="53.34" y1="246.38" x2="53.34" y2="248.92" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="BQ21040" pin="ISET"/>
+<pinref part="U4" gate="BQ21040" pin="ISET"/>
 <wire x1="53.34" y1="248.92" x2="55.88" y2="248.92" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -11191,7 +11202,7 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <pinref part="U6" gate="G$1" pin="PD0(INT0/OC0B/SCL)"/>
 <wire x1="175.26" y1="101.6" x2="340.36" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="340.36" y1="101.6" x2="340.36" y2="172.72" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="INT1"/>
+<pinref part="U3" gate="G$1" pin="INT1"/>
 <wire x1="340.36" y1="172.72" x2="327.66" y2="172.72" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -11200,7 +11211,7 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <pinref part="U6" gate="G$1" pin="PD1(INT1/SDA)"/>
 <wire x1="175.26" y1="104.14" x2="337.82" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="337.82" y1="104.14" x2="337.82" y2="170.18" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="INT2"/>
+<pinref part="U3" gate="G$1" pin="INT2"/>
 <wire x1="337.82" y1="170.18" x2="327.66" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
