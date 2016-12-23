@@ -148,9 +148,6 @@
 <wire x1="65.786" y1="25.4" x2="65.786" y2="0" width="0.2032" layer="20"/>
 <text x="59.436" y="22.86" size="1.016" layer="21" font="vector" rot="R270">Tiny Avionics - Rev 2.0</text>
 <text x="26.924" y="22.352" size="0.762" layer="21">POWER ON</text>
-<text x="-3.683" y="15.875" size="0.4064" layer="21">STAT1</text>
-<text x="54.483" y="-1.016" size="0.254" layer="21" font="vector">VBUS</text>
-<text x="45.085" y="-3.048" size="0.254" layer="21" font="vector" rot="R180">VCC</text>
 <text x="23.495" y="27.94" size="1.778" layer="150">Tiny AV Board Layout
 Rev: 1.0
 Date: 12/08/2016
@@ -2070,8 +2067,8 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="MPN" value="ATS080B" x="41.813" y="3.196" size="0.508" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="36.987" y="1.418" size="0.508" layer="25" ratio="10" rot="R180"/>
 </element>
-<element name="R2" library="rcl" package="R0603" value="10k" x="55.481" y="11.597" smashed="yes" rot="R90">
-<attribute name="NAME" x="56.406" y="12.025" size="0.508" layer="25" ratio="10" rot="R270"/>
+<element name="R2" library="rcl" package="R0603" value="10k" x="55.481" y="11.47" smashed="yes" rot="R90">
+<attribute name="NAME" x="56.406" y="11.898" size="0.508" layer="25" ratio="10" rot="R270"/>
 </element>
 <element name="JP1" library="pinhead" package="1X03" value="" x="53.848" y="22.987" smashed="yes">
 <attribute name="NAME" x="53.0098" y="20.4978" size="0.762" layer="25" ratio="10"/>
@@ -2366,8 +2363,8 @@ Please make sure your boards conform to these design rules.</description>
 <via x="2.413" y="18.542" extent="1-16" drill="0.3302"/>
 <via x="8.636" y="23.622" extent="1-16" drill="0.3302"/>
 <via x="4.064" y="9.017" extent="1-16" drill="0.3302"/>
+<via x="48.514" y="7.62" extent="1-16" drill="0.3302"/>
 <wire x1="26.683" y1="13.204" x2="27.813" y2="13.834" width="0" layer="19" extent="1-1"/>
-<wire x1="47.964" y1="8.7" x2="44.831" y2="8.636" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="CLK">
 <contactref element="U6" pad="9"/>
@@ -2559,7 +2556,7 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="56.732" y1="15.323" x2="56.732" y2="14.695" width="0.508" layer="1"/>
 <wire x1="56.732" y1="14.695" x2="55.499" y2="13.462" width="0.508" layer="1"/>
 <wire x1="55.499" y1="13.462" x2="55.499" y2="12.465" width="0.508" layer="1"/>
-<wire x1="55.499" y1="12.465" x2="55.481" y2="12.447" width="0.508" layer="1"/>
+<wire x1="55.499" y1="12.465" x2="55.481" y2="12.32" width="0.508" layer="1"/>
 <wire x1="56.732" y1="15.323" x2="57.614" y2="15.323" width="0.508" layer="1"/>
 <wire x1="57.614" y1="15.323" x2="58.166" y2="15.875" width="0.508" layer="1"/>
 <wire x1="58.166" y1="15.875" x2="58.166" y2="18.415" width="0.508" layer="1"/>
@@ -2945,10 +2942,6 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="34.798" y1="6.223" x2="27.94" y2="6.223" width="0.4064" layer="16"/>
 <wire x1="27.94" y1="6.223" x2="26.67" y2="7.493" width="0.4064" layer="16"/>
 <wire x1="53.178" y1="2.273" x2="53.178" y2="10.573" width="0.4064" layer="1"/>
-<wire x1="53.178" y1="10.573" x2="54.388" y2="10.573" width="0.4064" layer="1"/>
-<wire x1="54.388" y1="10.573" x2="54.483" y2="10.668" width="0.4064" layer="1"/>
-<wire x1="54.483" y1="10.668" x2="55.402" y2="10.668" width="0.4064" layer="1"/>
-<wire x1="55.402" y1="10.668" x2="55.481" y2="10.747" width="0.4064" layer="1"/>
 <wire x1="53.178" y1="2.273" x2="53.178" y2="4.861" width="0.4064" layer="1"/>
 <wire x1="53.178" y1="4.861" x2="51.943" y2="6.096" width="0.4064" layer="1"/>
 <wire x1="51.943" y1="6.096" x2="48.768" y2="6.096" width="0.4064" layer="1"/>
@@ -2965,6 +2958,8 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="38.481" y1="8.89" x2="38.989" y2="8.382" width="0.4064" layer="1"/>
 <wire x1="38.989" y1="8.382" x2="38.989" y2="6.925" width="0.4064" layer="1"/>
 <wire x1="38.989" y1="6.925" x2="38.964" y2="6.9" width="0.4064" layer="1"/>
+<wire x1="53.178" y1="10.573" x2="55.481" y2="10.573" width="0.4064" layer="1"/>
+<wire x1="55.481" y1="10.573" x2="55.481" y2="10.62" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$6">
 <contactref element="U6" pad="3"/>
@@ -3166,18 +3161,10 @@ Please make sure your boards conform to these design rules.</description>
 </signal>
 </signals>
 <errors>
-<approved hash="5,1,1a4e16553c5d521d"/>
-<approved hash="5,1,93ba86ad2cb54b09"/>
-<approved hash="5,1,d787d1bf3f8f0f81"/>
-<approved hash="5,1,0f0d3f33d133d70b"/>
-<approved hash="5,1,eb3bad33a303830d"/>
-<approved hash="5,1,8381a38fadbfeb87"/>
-<approved hash="3,1,320ec636c9fb3dc3"/>
-<approved hash="3,1,f20ef636f9fafdc2"/>
-<approved hash="5,1,dea55e4ed7c13c51"/>
 <approved hash="5,1,a3db5e4ed7dd4133"/>
-<approved hash="5,1,80e338925e5218f5"/>
+<approved hash="5,1,dea55e4ed7c13c51"/>
 <approved hash="5,1,fb4b3b925d52605d"/>
+<approved hash="5,1,80e338925e5218f5"/>
 <approved hash="5,1,6a44aa9251526c52"/>
 <approved hash="5,1,e0a15ab6eea33fc9"/>
 <approved hash="5,1,e32e5ac8eec13c5a"/>
