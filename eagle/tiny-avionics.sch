@@ -7806,6 +7806,22 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/703465986AD8611_2_0.pdf<
 <text x="-5.08" y="2.54" size="1.27" layer="25" font="vector">&gt;name</text>
 <text x="-5.08" y="-3.81" size="1.27" layer="27" font="vector">&gt;value</text>
 </package>
+<package name="R0603">
+<description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
+<wire x1="-0.432" y1="-0.356" x2="0.432" y2="-0.356" width="0.1524" layer="51"/>
+<wire x1="0.432" y1="0.356" x2="-0.432" y2="0.356" width="0.1524" layer="51"/>
+<wire x1="-1.473" y1="0.983" x2="1.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="0.983" x2="1.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="1.473" y1="-0.983" x2="-1.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
+<smd name="1" x="-0.85" y="0" dx="1" dy="1.1" layer="1"/>
+<smd name="2" x="0.85" y="0" dx="1" dy="1.1" layer="1"/>
+<text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="0.4318" y1="-0.4318" x2="0.8382" y2="0.4318" layer="51"/>
+<rectangle x1="-0.8382" y1="-0.4318" x2="-0.4318" y2="0.4318" layer="51"/>
+<rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
+</package>
 </packages>
 <symbols>
 <symbol name="SPDT">
@@ -7910,6 +7926,18 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/703465986AD8611_2_0.pdf<
 <text x="1.524" y="-1.143" size="0.8636" layer="93">2</text>
 <pin name="2" x="2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="1" x="-2.54" y="0" visible="off" length="point" direction="pas" swaplevel="1"/>
+</symbol>
+<symbol name="THERMIST">
+<wire x1="2.54" y1="1.016" x2="2.54" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-1.016" x2="-2.54" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-1.016" x2="-2.54" y2="1.016" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.016" x2="2.54" y2="1.016" width="0.254" layer="94"/>
+<wire x1="3.1496" y1="-2.032" x2="2.032" y2="-2.032" width="0.254" layer="94"/>
+<wire x1="2.032" y1="-2.032" x2="-2.032" y2="2.032" width="0.254" layer="94"/>
+<text x="-2.54" y="3.81" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-6.35" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="2" x="-5.08" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -8030,6 +8058,22 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/703465986AD8611_2_0.pdf<
 </gates>
 <devices>
 <device name="" package="ATS-SM">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="THERMISTOR-SMD">
+<gates>
+<gate name="G$1" symbol="THERMIST" x="0" y="0"/>
+</gates>
+<devices>
+<device name="0603" package="R0603">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
@@ -9878,6 +9922,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="SUPPLY10" library="supply2" deviceset="GND" device=""/>
 <part name="C3" library="rcl" deviceset="C-EU" device="C0603" value="2.2µ"/>
 <part name="SUPPLY14" library="supply2" deviceset="GND" device=""/>
+<part name="U$1" library="tinyav-lib" deviceset="THERMISTOR-SMD" device="0603"/>
 </parts>
 <sheets>
 <sheet>
@@ -10104,6 +10149,7 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <instance part="SUPPLY10" gate="GND" x="294.64" y="203.2"/>
 <instance part="C3" gate="G$1" x="190.5" y="248.92" rot="MR0"/>
 <instance part="SUPPLY14" gate="GND" x="190.5" y="241.3"/>
+<instance part="U$1" gate="G$1" x="81.28" y="220.98" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -10141,6 +10187,10 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <pinref part="J3" gate="G$1" pin="1"/>
 <pinref part="SUPPLY2" gate="GND" pin="GND"/>
 <wire x1="96.52" y1="220.98" x2="96.52" y2="213.36" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="2"/>
+<wire x1="81.28" y1="215.9" x2="81.28" y2="213.36" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="213.36" x2="96.52" y2="213.36" width="0.1524" layer="91"/>
+<junction x="96.52" y="213.36"/>
 </segment>
 <segment>
 <pinref part="C7" gate="G$1" pin="2"/>
@@ -10904,6 +10954,16 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <wire x1="337.82" y1="104.14" x2="337.82" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="U3" gate="G$1" pin="INT2"/>
 <wire x1="337.82" y1="170.18" x2="327.66" y2="170.18" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$9" class="0">
+<segment>
+<pinref part="U4" gate="BQ21040" pin="TS"/>
+<wire x1="81.28" y1="248.92" x2="83.82" y2="248.92" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="248.92" x2="83.82" y2="231.14" width="0.1524" layer="91"/>
+<wire x1="83.82" y1="231.14" x2="81.28" y2="231.14" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="1"/>
+<wire x1="81.28" y1="231.14" x2="81.28" y2="226.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
