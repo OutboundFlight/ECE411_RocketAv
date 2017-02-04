@@ -7742,20 +7742,20 @@ package type OT</description>
 <wire x1="1.5" y1="1.25" x2="-1.5" y2="1.25" width="0.05" layer="21"/>
 <wire x1="-1.5" y1="1.25" x2="-1.5" y2="-1.25" width="0.05" layer="21"/>
 <wire x1="-1.5" y1="-1.25" x2="1.5" y2="-1.25" width="0.05" layer="21"/>
-<smd name="13" x="0" y="0.88" dx="0.35" dy="0.55" layer="1" cream="no"/>
-<smd name="14" x="0.5" y="0.88" dx="0.35" dy="0.55" layer="1" cream="no"/>
-<smd name="12" x="-0.5" y="0.88" dx="0.35" dy="0.55" layer="1" cream="no"/>
-<smd name="10" x="-1.12" y="0.25" dx="0.35" dy="0.55" layer="1" rot="R90" cream="no"/>
-<smd name="11" x="-1.12" y="0.75" dx="0.35" dy="0.55" layer="1" rot="R90" cream="no"/>
-<smd name="9" x="-1.12" y="-0.25" dx="0.35" dy="0.55" layer="1" rot="R90" cream="no"/>
-<smd name="8" x="-1.12" y="-0.75" dx="0.35" dy="0.55" layer="1" rot="R90" cream="no"/>
-<smd name="6" x="0" y="-0.88" dx="0.35" dy="0.55" layer="1" rot="R180" cream="no"/>
-<smd name="7" x="-0.5" y="-0.88" dx="0.35" dy="0.55" layer="1" rot="R180" cream="no"/>
-<smd name="5" x="0.5" y="-0.88" dx="0.35" dy="0.55" layer="1" rot="R180" cream="no"/>
-<smd name="3" x="1.13" y="-0.25" dx="0.35" dy="0.55" layer="1" rot="R90" cream="no"/>
-<smd name="2" x="1.13" y="0.25" dx="0.35" dy="0.55" layer="1" rot="R90" cream="no"/>
-<smd name="1" x="1.13" y="0.75" dx="0.35" dy="0.55" layer="1" rot="R90" cream="no"/>
-<smd name="4" x="1.13" y="-0.75" dx="0.35" dy="0.55" layer="1" rot="R90" cream="no"/>
+<smd name="13" x="0" y="0.88" dx="0.34" dy="0.55" layer="1" cream="no"/>
+<smd name="14" x="0.5" y="0.88" dx="0.34" dy="0.55" layer="1" cream="no"/>
+<smd name="12" x="-0.5" y="0.88" dx="0.34" dy="0.55" layer="1" cream="no"/>
+<smd name="10" x="-1.12" y="0.25" dx="0.34" dy="0.55" layer="1" rot="R90" cream="no"/>
+<smd name="11" x="-1.12" y="0.75" dx="0.34" dy="0.55" layer="1" rot="R90" cream="no"/>
+<smd name="9" x="-1.12" y="-0.25" dx="0.34" dy="0.55" layer="1" rot="R90" cream="no"/>
+<smd name="8" x="-1.12" y="-0.75" dx="0.34" dy="0.55" layer="1" rot="R90" cream="no"/>
+<smd name="6" x="0" y="-0.88" dx="0.34" dy="0.55" layer="1" rot="R180" cream="no"/>
+<smd name="7" x="-0.5" y="-0.88" dx="0.34" dy="0.55" layer="1" rot="R180" cream="no"/>
+<smd name="5" x="0.5" y="-0.88" dx="0.34" dy="0.55" layer="1" rot="R180" cream="no"/>
+<smd name="3" x="1.13" y="-0.25" dx="0.34" dy="0.55" layer="1" rot="R90" cream="no"/>
+<smd name="2" x="1.13" y="0.25" dx="0.34" dy="0.55" layer="1" rot="R90" cream="no"/>
+<smd name="1" x="1.13" y="0.75" dx="0.34" dy="0.55" layer="1" rot="R90" cream="no"/>
+<smd name="4" x="1.13" y="-0.75" dx="0.34" dy="0.55" layer="1" rot="R90" cream="no"/>
 <circle x="1.3" y="1.05" radius="0.070709375" width="0.05" layer="21"/>
 <wire x1="1.5" y1="-1.25" x2="1.5" y2="1.25" width="0.05" layer="21"/>
 <text x="-0.95" y="-1.8" size="0.35" layer="21">&gt;VALUE</text>
@@ -7864,7 +7864,7 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/703465986AD8611_2_0.pdf<
 <wire x1="-7.62" y1="-5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="7.62" y1="-5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
 <wire x1="7.62" y1="5.08" x2="-7.62" y2="5.08" width="0.254" layer="94"/>
-<pin name="/CHG" x="12.7" y="-2.54" length="middle" rot="R180"/>
+<pin name="!CHG" x="12.7" y="-2.54" length="middle" rot="R180"/>
 <pin name="OUT" x="12.7" y="2.54" length="middle" rot="R180"/>
 <pin name="TS" x="12.7" y="0" length="middle" rot="R180"/>
 <pin name="VIN" x="-12.7" y="2.54" length="middle"/>
@@ -7987,7 +7987,7 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/703465986AD8611_2_0.pdf<
 <devices>
 <device name="" package="SOT23-6L">
 <connects>
-<connect gate="BQ21040" pin="/CHG" pad="3"/>
+<connect gate="BQ21040" pin="!CHG" pad="3"/>
 <connect gate="BQ21040" pin="GND" pad="5"/>
 <connect gate="BQ21040" pin="ISET" pad="4"/>
 <connect gate="BQ21040" pin="OUT" pad="2"/>
@@ -10916,7 +10916,7 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <pinref part="R15" gate="G$1" pin="2"/>
 <wire x1="71.12" y1="233.68" x2="71.12" y2="236.22" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="236.22" x2="81.28" y2="236.22" width="0.1524" layer="91"/>
-<pinref part="U4" gate="BQ21040" pin="/CHG"/>
+<pinref part="U4" gate="BQ21040" pin="!CHG"/>
 <wire x1="81.28" y1="236.22" x2="81.28" y2="246.38" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -10961,9 +10961,6 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="202,1,50.8,251.46,IC1,AC,,,,"/>
-</errors>
 </schematic>
 </drawing>
 <compatibility>
