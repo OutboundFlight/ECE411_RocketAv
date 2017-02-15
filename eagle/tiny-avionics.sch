@@ -7742,20 +7742,20 @@ package type OT</description>
 <wire x1="1.5" y1="1.25" x2="-1.5" y2="1.25" width="0.05" layer="21"/>
 <wire x1="-1.5" y1="1.25" x2="-1.5" y2="-1.25" width="0.05" layer="21"/>
 <wire x1="-1.5" y1="-1.25" x2="1.5" y2="-1.25" width="0.05" layer="21"/>
-<smd name="13" x="0" y="0.88" dx="0.34" dy="0.55" layer="1" cream="no"/>
-<smd name="14" x="0.5" y="0.88" dx="0.34" dy="0.55" layer="1" cream="no"/>
-<smd name="12" x="-0.5" y="0.88" dx="0.34" dy="0.55" layer="1" cream="no"/>
-<smd name="10" x="-1.12" y="0.25" dx="0.34" dy="0.55" layer="1" rot="R90" cream="no"/>
-<smd name="11" x="-1.12" y="0.75" dx="0.34" dy="0.55" layer="1" rot="R90" cream="no"/>
-<smd name="9" x="-1.12" y="-0.25" dx="0.34" dy="0.55" layer="1" rot="R90" cream="no"/>
-<smd name="8" x="-1.12" y="-0.75" dx="0.34" dy="0.55" layer="1" rot="R90" cream="no"/>
-<smd name="6" x="0" y="-0.88" dx="0.34" dy="0.55" layer="1" rot="R180" cream="no"/>
-<smd name="7" x="-0.5" y="-0.88" dx="0.34" dy="0.55" layer="1" rot="R180" cream="no"/>
-<smd name="5" x="0.5" y="-0.88" dx="0.34" dy="0.55" layer="1" rot="R180" cream="no"/>
-<smd name="3" x="1.13" y="-0.25" dx="0.34" dy="0.55" layer="1" rot="R90" cream="no"/>
-<smd name="2" x="1.13" y="0.25" dx="0.34" dy="0.55" layer="1" rot="R90" cream="no"/>
-<smd name="1" x="1.13" y="0.75" dx="0.34" dy="0.55" layer="1" rot="R90" cream="no"/>
-<smd name="4" x="1.13" y="-0.75" dx="0.34" dy="0.55" layer="1" rot="R90" cream="no"/>
+<smd name="13" x="0" y="0.88" dx="0.34" dy="0.55" layer="1"/>
+<smd name="14" x="0.5" y="0.88" dx="0.34" dy="0.55" layer="1"/>
+<smd name="12" x="-0.5" y="0.88" dx="0.34" dy="0.55" layer="1"/>
+<smd name="10" x="-1.12" y="0.25" dx="0.34" dy="0.55" layer="1" rot="R90"/>
+<smd name="11" x="-1.12" y="0.75" dx="0.34" dy="0.55" layer="1" rot="R90"/>
+<smd name="9" x="-1.12" y="-0.25" dx="0.34" dy="0.55" layer="1" rot="R90"/>
+<smd name="8" x="-1.12" y="-0.75" dx="0.34" dy="0.55" layer="1" rot="R90"/>
+<smd name="6" x="0" y="-0.88" dx="0.34" dy="0.55" layer="1" rot="R180"/>
+<smd name="7" x="-0.5" y="-0.88" dx="0.34" dy="0.55" layer="1" rot="R180"/>
+<smd name="5" x="0.5" y="-0.88" dx="0.34" dy="0.55" layer="1" rot="R180"/>
+<smd name="3" x="1.13" y="-0.25" dx="0.34" dy="0.55" layer="1" rot="R90"/>
+<smd name="2" x="1.13" y="0.25" dx="0.34" dy="0.55" layer="1" rot="R90"/>
+<smd name="1" x="1.13" y="0.75" dx="0.34" dy="0.55" layer="1" rot="R90"/>
+<smd name="4" x="1.13" y="-0.75" dx="0.34" dy="0.55" layer="1" rot="R90"/>
 <circle x="1.3" y="1.05" radius="0.070709375" width="0.05" layer="21"/>
 <wire x1="1.5" y1="-1.25" x2="1.5" y2="1.25" width="0.05" layer="21"/>
 <text x="-0.95" y="-1.8" size="0.35" layer="21">&gt;VALUE</text>
@@ -7791,8 +7791,8 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/703465986AD8611_2_0.pdf<
 <rectangle x1="-2.1501" y1="2" x2="-1.6599" y2="3.1001" layer="51"/>
 </package>
 <package name="ATS-SM">
-<smd name="1" x="4.25" y="0" dx="5.5" dy="1.5" layer="1" stop="no" cream="no"/>
-<smd name="2" x="-4.25" y="0" dx="5.5" dy="1.5" layer="1" stop="no" cream="no"/>
+<smd name="1" x="4.25" y="0" dx="5.5" dy="1.5" layer="1" stop="no"/>
+<smd name="2" x="-4.25" y="0" dx="5.5" dy="1.5" layer="1" stop="no"/>
 <wire x1="-5.5" y1="2.4" x2="5.55" y2="2.4" width="0.127" layer="51"/>
 <wire x1="5.55" y1="2.4" x2="5.55" y2="-2.4" width="0.127" layer="51"/>
 <wire x1="5.55" y1="-2.4" x2="-5.55" y2="-2.4" width="0.127" layer="51"/>
