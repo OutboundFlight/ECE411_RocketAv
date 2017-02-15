@@ -2,7 +2,7 @@ Overview:
 
 This GitHub provides documentation for the design, implemation, and use of the TinyAV
 Amateur Avionics System. The TinyAV is a printed circuit board that includes a 
-microcontroller, acellerometer, gyroscope, magnetometer, temperature sensor, flash
+microcontroller, acellerometer, gyroscope, temperature sensor, flash
 memory storage, and a rechargeable lithium-ion battery. It allows for a portable way 
 to record flight data that can be use for flight analysis on model rockets.
 
