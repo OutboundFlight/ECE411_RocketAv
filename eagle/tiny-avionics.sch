@@ -9956,6 +9956,7 @@ All resistors 1%, high values 1/10W, low values 1/2 W</text>
 <text x="302.26" y="231.902" size="1.778" layer="97">U2</text>
 <text x="138.938" y="255.778" size="1.778" layer="97">U1</text>
 <text x="54.102" y="212.344" size="1.778" layer="97" rot="R90">100 mA charge</text>
+<text x="416.56" y="7.62" size="2.54" layer="97">2.0</text>
 </plain>
 <instances>
 <instance part="C1" gate="G$1" x="91.44" y="248.92"/>
